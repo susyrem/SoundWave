@@ -1,1 +1,1 @@
-Proyecto Integrador de Lady Hackers | Generation México,
+Proyecto Integrador de Lady Hackers | Generation México.
