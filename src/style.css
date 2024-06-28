@@ -17,10 +17,14 @@
     color: white;
 }
 
+#menu-icon {
+    color: #AACA45;
+}
 
 body {
     background-color: rgba(32, 26, 50, 0.945);
 }
+
 
 nav {
     background-color: #201A32;
@@ -39,9 +43,7 @@ nav {
     color: #AACA45;
 }
 
-.navbar-toggler-icon {
-    color: #AACA45;
-}
+
 #cards {
     margin-bottom:5rem;
 }
@@ -51,6 +53,10 @@ nav {
     color: white;
     height: 35rem;
 }
+.card-icon {
+    align-content: end;
+}
+
 footer h2 {
     color: #AACA45;
     font-size: 24px;
