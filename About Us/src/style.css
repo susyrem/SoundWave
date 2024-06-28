@@ -1,18 +1,43 @@
 #navbar-text {
     color: #AACA45;
-    font-size: 24px;
+    font-size: 18px;
 }
+#navbar-text:hover {
+    color: #B59CFE;
+    font-size: 18px;
+}
+#navbar-text-title {
+    color: #AACA45;
+    font-size: 20px;
+}
+
 
 body {
     background-color: rgba(32, 26, 50, 0.945);
 }
 
 nav {
-    style="background-color: #201A32;"
+    background-color: #201A32;
+    color: #AACA45;
+    margin-bottom: 5rem;
 }
 
+@media (max-width: 991px){
+    .sidebar {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
+.offcanvas {
+    
+    color: #AACA45;
+}
+
+.navbar-toggler-icon {
+    color: #AACA45;
+}
 #cards {
-    margin-bottom:10rem;
+    margin-bottom:5rem;
 }
 
 .card {

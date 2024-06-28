@@ -14,22 +14,38 @@
     <header>
         <div class="container"></div>
     </header>
-    <nav class="navbar shadow p-3 mb-5" >
-        <div class="container-fluid align-middle">
-            <a class="navbar-brand" href="#" id="navbar-text">
-                <img src="./public/img/LogoColorTrans.png" alt="Logo" width="50" class="align-middle me-2" id="navbar-text">
-                SoundWave
-            </a>
-            <div class="row" style="width: 15%;">
-                <div class="col-6">
-                    <a class="nav-link text" id="navbar-text" href="#" >Sign in</a>
-                </div>
-                <div class="col-6">
-                    <a class="nav-link" id="navbar-text" href="#" >Sign up</a>
-                </div>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a id="navbar-text-title" class="navbar-brand" href="#">
+          <img src="./public/img/LogoColorTrans.png" alt="Logo" width="50" class="align-middle me-2" id="navbar-text">
+          SoundWave
+        </a>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon shadow-none"></span>
+        </button>
+
+        <!-- Sidebar -->
+        <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <!-- Sidebar Header -->
+          <div class="offcanvas-header text">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end text-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a id="navbar-text" class="nav-link active" aria-current="page" href="#">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a id="navbar-text" class="nav-link active" aria-current="page" href="#">Sign Up</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </nav>
+    
     <section id="cards">
       <div class="container my-4">
         <div class="row d-flex justify-content-between">
@@ -228,7 +244,7 @@
     </section>
 
     <footer class="row">
-      <div class="col ms-5 ">
+      <div class="col-md-4 col-sm-12 text-center mb-5 ">
         <h2>SoundWave</h2>
         <a href="">Inicio</a><br>
         <a href="">About Us</a><br>
@@ -237,7 +253,7 @@
         <a href="">Privacy Policy</a><br>
       </div>
       
-      <div class="col justify-content-center text-center">
+      <div class="col-md-4 col-sm-12 justify-content-center text-center mb-5">
         <h2>Connect with us!</h2>
         <div class="row justify-content-center">
           <div class="col-2">
@@ -268,7 +284,7 @@
         </div>
       </div>  
 
-      <div id="sub" class="col justify-content-center text-center ">
+      <div id="sub" class="col-md-3 col-sm-12 justify-content-center text-center mb-5">
         <h2>Subscribe to our newsletter.</h2><br>
         <form action="">
           <input id="subInput" type="email" placeholder="E-mail"><br>
