@@ -46,7 +46,12 @@ nav {
     color: #AACA45;
 }
 
-
+#title-desc {
+    font-size: 35px;
+}
+#description {
+    font-size: 24px;
+}
 #cards {
     margin-bottom:5rem;
 }
@@ -119,4 +124,7 @@ svg:hover {
     padding: .2rem .5rem;
 
 }
+#subInput:hover {
+    background-color: rgb(158, 158, 158);
 
+}
