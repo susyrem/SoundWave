@@ -10,6 +10,12 @@
     color: #AACA45;
     font-size: 20px;
 }
+#title-aboutUs {
+    color: #AACA45;
+}
+#title-aboutUs p {
+    color: white;
+}
 
 
 body {
@@ -42,7 +48,8 @@ nav {
 
 .card {
     background-color: rgb(32, 26, 50);
-    color: #AACA45;
+    color: white;
+    height: 35rem;
 }
 footer h2 {
     color: #AACA45;
