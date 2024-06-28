@@ -10,3 +10,60 @@ body {
 nav {
     style="background-color: #201A32;"
 }
+
+#cards {
+    margin-bottom:10rem;
+}
+
+.card {
+    background-color: rgb(32, 26, 50);
+    color: #AACA45;
+}
+footer h2 {
+    color: #AACA45;
+    font-size: 24px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+svg{
+    color: white;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+#sub {
+    margin-right: 6rem;
+}
+
+#subButton {
+    border-radius: 1.5rem;
+    border-color: #AACA45;
+    border-style: solid;
+    background: transparent;
+    color: #AACA45;
+    padding: .2rem .5rem;
+    
+}
+
+#subButton:hover {
+    border-radius: 1.5rem;
+    border-color: #AACA45;
+    border-style: solid;
+    background:#AACA45;
+    color: white;
+    padding: .2rem .5rem;
+}
+
+#subInput {
+    border-radius: 1.5rem;
+    border-style: none;
+    background-color: rgb(204, 204, 204);
+    padding: .2rem .5rem;
+
+}
+
