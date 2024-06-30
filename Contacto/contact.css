@@ -34,17 +34,58 @@ nav {
     color: #AACA45;
     margin-bottom: 5rem;
 }
+main {
+    margin-bottom: 15rem;
+}
 
 @media (max-width: 991px){
     .sidebar {
         background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(20px);
     }
 }
+
 .offcanvas {
     
     color: #AACA45;
 }
+
+#contact-form {
+    width: 90%;
+    max-width: 600px;
+    align-items: center;
+}
+#name, #email, #message, #phone {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    height: 3rem;
+    border:1px solid #AACA45;
+    color: white;
+    background-color: transparent;
+}
+#message {
+    height: 10rem;
+}
+#btn {
+    width: 100px;
+    align-items: center;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    height: 3rem;
+    border:1px solid #AACA45;
+    color: white;
+    background-color: #AACA45;
+    font-size: 20px;
+}
+#btn:hover {
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    height: 3rem;
+    border:1px solid #AACA45;
+    color: white;
+    background-color: transparent;
+}
+
 
 #title-desc {
     font-size: 35px;
