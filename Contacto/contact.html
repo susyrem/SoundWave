@@ -53,7 +53,7 @@
         <h1 class="title-desc text-center mb-5">Contact Us</h1>
         <p id="description" class="text-center justify-content-center mx-3 mb-5">If you have any questions, comments or suggestions, contact us and we will contact you as soon as possible.</p>
         <form name="form1" id="myform" onsubmit="sendEmail(); reset(); return false" class="contact-form row justify-content-center">
-          <input class="col me-3" type="text" id="name" placeholder="Your name" onkeypress="preventNumberInput(event)"  required>
+          <input class="col me-3" type="text" id="name" placeholder="Your name" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"  required>
           <input class="col" type="phone" id="phone" placeholder="Your phone" onkeypress="return isNumberKey(event)" pattern="[0-9]{10}" maxlength="10" required>
           <input class="col ms-3" type="email" id="email" placeholder="Your E-mail"  required>
           <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
