@@ -130,14 +130,12 @@ svg:hover {
 }
 
 .flip-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: transparent;
     width: 30rem;
     height: 30rem;
-    perspective: 1000px; /* Establece la perspectiva para la animación */
-    margin-bottom: 20px;
+    perspective: 1000px; 
+    justify-content: center;
+    align-items: center;
   }
   
   .flip-card-inner {
