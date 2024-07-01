@@ -63,8 +63,20 @@ main {
     color: white;
     background-color: transparent;
 }
+#name:hover, #email:hover, #phone:hover {
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    height: 3rem;
+    border:1px solid #B59CFE;
+    color: white;
+    background-color: transparent;
+}
 #message {
     height: 10rem;
+}
+#message:hover {
+    height: 10rem;
+    border: 1px solid #B59CFE;
 }
 #btn {
     width: 100px;
@@ -81,8 +93,8 @@ main {
     border-radius: 30px;
     margin-bottom: 1rem;
     height: 3rem;
-    border:1px solid #AACA45;
-    color: white;
+    border:1px solid #B59CFE;
+    color: #B59CFE;
     background-color: transparent;
 }
 

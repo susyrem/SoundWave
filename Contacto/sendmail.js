@@ -6,5 +6,5 @@ function sendEmail(){
         phone : document.getElementById("phone").value,
 
     }
-    emailjs.send("service_nao4sns","template_hc4na4l", parms).then(alert("Message Sent Succesfully"));
+    emailjs.send("service_nao4sns","template_hc4na4l", parms).then(alert("Message was sent succesfully."));
 }
