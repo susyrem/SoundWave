@@ -10,10 +10,11 @@
     color: #AACA45;
     font-size: 20px;
 }
-#title-contactUs {
+#post-form {
     color: #AACA45;
+    border:1px solid #AACA45;
 }
-#title-contactUs p {
+#post-form p {
     color: white;
 }
 
@@ -50,39 +51,34 @@ main {
     color: #AACA45;
 }
 
-#contact-form {
+#post-form {
     width: 90%;
     max-width: 650px;
     align-items: center;
 }
-#name, #email, #phone {
-    border-radius: 5px;
-    margin-bottom: 1rem;
+
+#name {
     height: 3rem;
-    width: 12rem;
-    border:1px solid #AACA45;
+    border: none;
     color: white;
     background-color: transparent;
 }
-#name:hover, #email:hover, #phone:hover {
-    border-radius: 5px;
-    margin-bottom: 1rem;
+#name:hover {
+    border: none;
     height: 3rem;
-    border:1px solid #B59CFE;
     color: white;
     background-color: transparent;
 }
 #message {
-    border-radius: 5px;
+    border: none;
     margin-bottom: 1rem;
     height: 10rem;
-    border:1px solid #AACA45;
     color: white;
     background-color: transparent;
 }
 #message:hover {
     height: 10rem;
-    border: 1px solid #B59CFE;
+
 }
 #btn {
     width: 100px;
