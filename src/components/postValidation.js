@@ -11,7 +11,10 @@ formulario.addEventListener( "submit", (e) => {
   var m = formulario.elements[1];
 
   var name = n.value;
-  var message = e.value;
+  var message = m.value;
+
+  console.log(name);
+  console.log(message);
 
   if (name.length === 0) {
     n.classList.add("error")
@@ -23,22 +26,20 @@ formulario.addEventListener( "submit", (e) => {
 if (name.length > 0 
   && (message > 18 
     && message < 120) ) {
-  agregarPost(name, message)
+  addPost(name, message)
   }
 }
 );
 
-/* Remove: button */
-
 /* Edit: Arrow function */
-const agregarPost = (name, message) => {
+const addPost = (name, message) => {
 
 var post = document.getElementById("sharedPost")
 
 var elementPost = document.createElement("div")
 /* Edit: added -> add */
 elementPost.classList.add("element-post")
-lista.appendChild(elementPost)
+elementPost.appendChild(elementPost)
 
 
 /* Edit: Arrow function */
@@ -48,7 +49,7 @@ var espacio = document.createElement("br")
 spanName.textContent = description + ": "
 elementPost.appendChild(spanName)
 elementPost.appendChild(espacio)
-}
+};
 
 createElement("Username", name)
 createElement("Post", message)
