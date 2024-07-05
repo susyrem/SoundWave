@@ -52,21 +52,24 @@
     </header>
     <main>
         <!-- Posts -->
+        <h1 class="title-desc text-center mb-5">Feed</h1>
         <div id="post-form" class="container text-center justify-content-center">
-            <h1 class="title-desc text-center mb-5">Feed</h1>
-            <form name="form1" id="postingform" onsubmit="sendEmail(); reset(); return false" class="contact-form">
+            <form name="form1" id="postingform" class="contact-form">
                 <div class="row justify-content-center text-start">
-                    <input class="" type="text" id="name" placeholder="Username" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)" required>
+                    <input class="" type="text" id="name" placeholder="Username" required>
                 </div>
                 <div class="row justify-content-center text-start">
                     <textarea id="message" rows="4" placeholder="What are you listening to?"></textarea><br>
                 </div>
-                <button class id="btn" type="submit">Send</button>
+                <button id="btn" type="submit">Send</button>
             </form>
             <div class="mb-2" id="success-message">
 
             </div>
         </div>
+        <section id="sharedPost">
+
+        </section>
     </main>
     <footer id="navmenu-app" class="row">
 
@@ -77,6 +80,7 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/66c1aa2290.js" crossorigin="anonymous"></script>
     <script type="module" src="/index.js"></script>
+    <script type="module" src="./src/components/postValidation.js"></script>
 </body>
 
 </html>
