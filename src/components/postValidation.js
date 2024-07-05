@@ -1,68 +1,57 @@
-/* Edit: document.querySelector() -> document.form[] */
-var formulario = document.forms["postingform" ]
+var formulario = document.forms["postingform"];
 
-/* Edit: .onsubmit -> .addEventListener("submit") */
-formulario.addEventListener( "submit", (e) => {
-
-  /* Edit: prevent -> preventDefault() */
+formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-  
+
   var n = formulario.elements[0];
   var m = formulario.elements[1];
 
   var name = n.value;
-  var message = e.value;
+  var message = m.value;
 
+  // Resetting previous error styles
+  n.classList.remove("error");
+  m.classList.remove("error");
+
+  // Validating input fields
   if (name.length === 0) {
-    n.classList.add("error")
+    n.classList.add("error");
   }
-  if (message < 1 || message > 120) {
-    e.classList.add("error")
+  if (message.length === 0 || message.length > 120) {
+    m.classList.add("error");
   }
 
-if (name.length > 0 
-  && (message > 18 
-    && message < 120) ) {
-  agregarPost(name, message)
+  // If both fields are valid, proceed to add post
+  if (name.length > 0 && message.length > 0 && message.length <= 120) {
+    agregarPost(name, message);
+    // Reset form fields
+    formulario.reset();
   }
-}
-);
+});
 
-/* Remove: button */
-
-/* Edit: Arrow function */
 const agregarPost = (name, message) => {
+  var lista = document.getElementById("sharedPost");
 
-var post = document.getElementById("sharedPost")
+  var elementPost = document.createElement("div");
+  elementPost.classList.add("element-post");
+  lista.appendChild(elementPost);
 
-var elementPost = document.createElement("div")
-/* Edit: added -> add */
-elementPost.classList.add("element-post")
-lista.appendChild(elementPost)
+  createElement("Username", name, elementPost);
+  createElement("Post", message, elementPost);
 
+  var botonBorrar = document.createElement("button");
+  botonBorrar.textContent = "Delete Post";
+  botonBorrar.className = "btn-borrar"; // Use className to add classes
+  elementPost.appendChild(botonBorrar);
 
-/* Edit: Arrow function */
-const createElement = (description, value) => {
-var spanName = document.createElement("span")
-var espacio = document.createElement("br")
-spanName.textContent = description + ": "
-elementPost.appendChild(spanName)
-elementPost.appendChild(espacio)
-}
+  botonBorrar.addEventListener("click", function() {
+    elementPost.remove();
+  });
+};
 
-createElement("Username", name)
-createElement("Post", message)
-
-
-var botonBorrar = document.createElement("button")
-botonBorrar.textContent = "Delete Post"
-botonBorrar.id = "btn-borrar"
-var corteLinea = document.createElement("br")
-elementPost.appendChild(corteLinea)
-elementPost.appendChild(botonBorrar);
-
-botonBorrar.onclick = function() {
-// this.parentNode.style.display = 'none';
-botonBorrar.parentNode.remove()
-  }
-}
+const createElement = (description, value, parentElement) => {
+  var spanName = document.createElement("span");
+  spanName.textContent = description + ": " + value;
+  parentElement.appendChild(spanName);
+  parentElement.appendChild(document.createElement("br")); // Adding line break
+};
