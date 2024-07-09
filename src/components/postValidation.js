@@ -33,14 +33,14 @@ const agregarPost = (name, message) => {
   var lista = document.getElementById("sharedPost");
 
   var elementPost = document.createElement("div");
-  elementPost.classList.add("element-post");
+  elementPost.classList.add("element-post",);
   lista.appendChild(elementPost);
 
   createElement("Username", name, elementPost);
   createElement("Post", message, elementPost);
 
   var botonBorrar = document.createElement("button");
-  botonBorrar.textContent = "Delete Post";
+  botonBorrar.textContent = "Delete";
   botonBorrar.className = "btn-borrar"; // Use className to add classes
   elementPost.appendChild(botonBorrar);
 
