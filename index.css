@@ -186,3 +186,24 @@ svg:hover {
     background-color: rgb(158, 158, 158);
 
 }
+
+#sharedPost {
+    color: #AACA45; 
+    margin-top: 5rem
+}
+#sharedPost div {
+    color: #AACA45; 
+    text-align: center;
+    margin-top: 2rem
+}
+#sharedPost button {
+    color: #ca4545;
+    background-color: transparent;
+    border-style: none;
+
+}
+#sharedPost button:hover {
+    color: #8c8c8c;
+    background-color: transparent;
+    border-style: none;
+}
