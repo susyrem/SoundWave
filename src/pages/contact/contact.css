@@ -135,7 +135,10 @@ footer a {
     font-size: 18px;
 }
 
-#nav-footer:hover {
+#navmenu-app {
+    color: white;
+}
+#navmenu-item:hover {
     color: #B59CFE;
 }
 

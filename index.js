@@ -1,3 +1,3 @@
-import { navmenuApp } from './src/components/navmenu/navmenu-app.js';
+import { navmenuApp } from '/src/components/navmenu/navmenu-app.js';
 
-document.getElementById('navmenu-app').innerHTML =  navmenuApp();
+document.querySelector("#navmenu-app").innerHTML =  navmenuApp();
