@@ -11,7 +11,7 @@ const pages = [
     },
     {
       name: "About Us",
-      url: "/src/pages/about-us/about-us.html",
+      url: "https://susyrem.github.io/src/pages/about-us/aboutUs.html",
       active: false,
     },
     {
