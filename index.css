@@ -1,3 +1,6 @@
+html {
+    scroll-snap-type: y mandatory;
+}
 #navbar-text {
     color: #AACA45;
     font-size: 18px;
@@ -40,6 +43,9 @@ nav {
 main {
     margin-top: 0;
     margin-bottom: 15rem;
+}
+section {
+    scroll-snap-align: start;
 }
 h1 {
     color: #AACA45;
@@ -109,6 +115,15 @@ h1 {
     
 }
 
+.landing-btn a {
+    color: #AACA45;
+    text-decoration: none;
+}
+.landing-btn a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 @media (max-width:768px) {
     .content {
         width: 100%;
@@ -149,8 +164,8 @@ h1 {
 }
 
 .cards {
-    margin-top: 22rem;
-    margin-bottom: 20rem;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
 }
 .card {
 
@@ -216,7 +231,7 @@ h5 {
     transition: 0.5s;
 }
 .features {
-    margin-top: 20rem;
+    padding-top: 15rem;
 }
 
 .features .card {
