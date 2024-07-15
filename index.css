@@ -74,7 +74,7 @@ h1 {
     top: 100px;
     height: 100vh;
     margin: 0 auto;
-    m
+    
 }
 
 
@@ -114,7 +114,7 @@ h1 {
         width: 100%;
     }
     #landing-h1 {
-        font-size: 50px;
+        font-size: 45px;
         padding: 2rem 2rem;
         margin-top: 1rem;
         margin-bottom: .5rem;
@@ -124,7 +124,7 @@ h1 {
         height: 100vw;
     }
     .landing-btn {
-        width: 20vw;
+        width: 22vw;
         height: 8vw;
         font-size: 4vw;
     }
@@ -155,7 +155,7 @@ h1 {
 .card {
 
     display: flex;
-    margin: 5rem 5rem;
+    margin: 5rem;
     background-color: transparent;
     border: #201A32;
     border-radius: 20px;
@@ -237,6 +237,23 @@ h6 {
     font-size: 50px;
 }
 
+
+@media (max-width:768px) {
+    .cards {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .card {
+        margin: 3rem;
+    }
+    .features {
+        margin-top: 5rem;
+        margin-bottom: 0;
+    }
+    main {
+        margin-bottom: 5rem;
+    }
+}
 #btn {
     width: 100px;
     justify-content: end;
