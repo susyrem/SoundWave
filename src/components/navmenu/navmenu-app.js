@@ -1,7 +1,7 @@
 const pages = [
     {
       name: "Home",
-      url: "/index.html",
+      url: "https://susyrem.github.io/index.html",
       active: false,
     },
     {
@@ -16,7 +16,7 @@ const pages = [
     },
     {
       name: "Contact",
-      url: "/src/pages/contact/contact.html",
+      url: "https://susyrem.github.io/src/pages/contact/contact.html",
       active: false,
     },
     {
