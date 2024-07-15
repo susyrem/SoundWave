@@ -1,41 +1,19 @@
-const pages = [
-    {
-      name: "Home",
-      url: "/index.html",
-      active: false,
-    },
-    {
-      name: "Terms of Service",
-      url: "/src/pages/tos/tos.html",
-      active: false,
-    },
-    {
-      name: "About Us",
-      url: "/src/pages/about-us/about-us.html",
-      active: false,
-    },
-    {
-      name: "Contact",
-      url: "/src/pages/contact/contact.html",
-      active: false,
-    },
-    {
-      name: "Privacy Policy",
-      url: "/src/pages/priv/priv.html",
-      active: false,
-    },
-  ];
+import { pages } from "./pages.js";
+import { getCurrentHtmlPage } from "./getCurrentHtml.js";
+import { createListItems } from "./createListItems.js";
+
+
+const navmenuApp = () => {  
+
+  const currentHTML = getCurrentHtmlPage();
+  const menuOptions = createListItems( pages, currentHTML );
   
-  const navmenuApp = () => {
+  
     // Filtro para seleccionar la página visitada
     return `
         <div class="col-md-4 col-sm-12 text-center mb-5 ">
             <h2>SoundWave</h2>
-            <a id="nav-footer" href="/index.html">Home</a><br>
-            <a id="nav-footer" href="/src/pages/about-us/aboutUs.html">About Us</a><br>
-            <a id="nav-footer" href="/src/pages/contacto/contact.html">Contact</a><br>
-            <a id="nav-footer" href="">Terms of Service</a><br>
-            <a id="nav-footer" href="">Privacy Policy</a><br>
+            ${menuOptions}
         </div>
         <div class="col-md-4 col-sm-12 justify-content-center text-center mb-5">
         <h2>Connect with us!</h2>
