@@ -46,6 +46,7 @@ main {
 }
 section {
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 h1 {
     color: #AACA45;
@@ -289,6 +290,10 @@ h6 {
     background-color: transparent;
 }
 
+footer {
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+}
 
 
 footer h2 {
@@ -304,6 +309,7 @@ footer a {
 
 #navmenu-app {
     color: white;
+    padding-top: 5rem;
 }
 #navmenu-item:hover {
     color: #B59CFE;
