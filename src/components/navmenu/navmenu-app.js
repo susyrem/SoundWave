@@ -26,16 +26,11 @@ const pages = [
     },
   ];
   
-  const navmenuApp = () => {
     // Filtro para seleccionar la página visitada
     return `
         <div class="col-md-4 col-sm-12 text-center mb-5 ">
             <h2>SoundWave</h2>
-            <a id="nav-footer" href="/index.html">Home</a><br>
-            <a id="nav-footer" href="/src/pages/about-us/aboutUs.html">About Us</a><br>
-            <a id="nav-footer" href="/src/pages/contacto/contact.html">Contact</a><br>
-            <a id="nav-footer" href="">Terms of Service</a><br>
-            <a id="nav-footer" href="">Privacy Policy</a><br>
+            ${menuOptions}
         </div>
         <div class="col-md-4 col-sm-12 justify-content-center text-center mb-5">
         <h2>Connect with us!</h2>

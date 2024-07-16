@@ -57,6 +57,12 @@ nav {
     margin-bottom:5rem;
 }
 
+@media (max-width: 991px) {
+    #cards {
+        margin-left: 2.5rem;
+    }
+}
+
 .card {
     background-color: rgb(32, 26, 50);
     color: white;
@@ -77,7 +83,10 @@ footer a {
     font-size: 18px;
 }
 
-#nav-footer:hover {
+#navmenu-app {
+    color: white;
+}
+#navmenu-item:hover {
     color: #B59CFE;
 }
 
