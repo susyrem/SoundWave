@@ -1,30 +1,12 @@
-const pages = [
-    {
-      name: "Home",
-      url: "https://susyrem.github.io/index.html",
-      active: false,
-    },
-    {
-      name: "Terms of Service",
-      url: "/src/pages/tos/tos.html",
-      active: false,
-    },
-    {
-      name: "About Us",
-      url: "https://susyrem.github.io/src/pages/about-us/aboutUs.html",
-      active: false,
-    },
-    {
-      name: "Contact",
-      url: "https://susyrem.github.io/src/pages/contact/contact.html",
-      active: false,
-    },
-    {
-      name: "Privacy Policy",
-      url: "/src/pages/priv/priv.html",
-      active: false,
-    },
-  ];
+import { pages } from "./pages.js";
+import { getCurrentHtmlPage } from "./getCurrentHtml.js";
+import { createListItems } from "./createListItems.js";
+
+
+const navmenuApp = () => {  
+
+  const currentHTML = getCurrentHtmlPage();
+  const menuOptions = createListItems( pages, currentHTML );
   
     // Filtro para seleccionar la página visitada
     return `
