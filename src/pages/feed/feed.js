@@ -1,6 +1,4 @@
-import { navmenuApp } from '/src/components/navmenu/navmenu-app.js';
 
-document.querySelector("#navmenu-app").innerHTML =  navmenuApp();
 
 document.addEventListener('DOMContentLoaded', (event) => {
     const lista = document.getElementById("sharedPost");
@@ -57,7 +55,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         const cardText1 = document.createElement("p");
         cardText1.className = "card-text";
-        cardText1.innerHTML = <i class="far fa-clock pe-2"></i>${post.fecha};
+        cardText1.innerHTML = '<i class="far fa-clock pe-2"></i>' + post.fecha;
         divText.appendChild(cardText1);
 
         cardBody1.appendChild(divText);
