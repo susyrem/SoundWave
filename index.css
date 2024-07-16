@@ -116,7 +116,7 @@ h1 {
     border:1px solid #AACA45;
     color: #AACA45;
     background-color: transparent;
-    font-size: 2vw;
+
     
 }
 .landing-btn:hover {
@@ -128,13 +128,12 @@ h1 {
     border:1px solid #AACA45;
     color: white;
     background-color: #AACA45;
-    font-size: 2vw;
-    
 }
 
 .landing-btn a {
     color: #AACA45;
     text-decoration: none;
+    font-size: 2vw;
 }
 .landing-btn a:hover {
     color: white;
@@ -142,6 +141,9 @@ h1 {
 }
 
 @media (max-width:768px) {
+    .landing {
+        margin-bottom: 1rem;
+    }
     .content {
         width: 100%;
     }
@@ -158,13 +160,18 @@ h1 {
     .landing-btn {
         width: 22vw;
         height: 8vw;
-        font-size: 4vw;
     }
     .landing-btn:hover {
         width: 22vw;
         height: 8vw;
+    }
+    .landing-btn a {
         font-size: 4vw;
     }
+    .landing-btn a:hover {
+        font-size: 4vw;
+    }
+
 }
 
 @media (max-width: 991px){
@@ -272,15 +279,15 @@ h6 {
 
 @media (max-width:768px) {
     .cards {
-        margin-top: 0;
-        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
     .card {
         margin: 3rem;
     }
     .features {
-        margin-top: 5rem;
-        margin-bottom: 0;
+        padding-top: 5rem;
+        padding-bottom: 0;
     }
     main {
         margin-bottom: 5rem;
