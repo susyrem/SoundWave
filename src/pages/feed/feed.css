@@ -114,10 +114,12 @@ h1 {
     margin-bottom:5rem;
 }
 
+
 .card {
     background-color: rgb(32, 26, 50);
     color: white;
-    height: 35rem;
+    height: 40rem;
+    width: 22rem;
 }
 .icons:hover {
     color:#B59CFE
@@ -133,11 +135,10 @@ footer a {
     color: white;
     font-size: 18px;
 }
-
-#navmenu-app {
+#navmenu-app a {
     color: white;
 }
-#navmenu-item:hover {
+#navmenu-app a:hover {
     color: #B59CFE;
 }
 
@@ -195,9 +196,8 @@ svg:hover {
     margin-top: 5rem
 }
 #sharedPost div {
-    color: #AACA45; 
+    color: white; 
     text-align: center;
-    margin-top: 2rem
 }
 #sharedPost button {
     color: #ca4545;
