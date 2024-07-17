@@ -10,11 +10,10 @@
     color: #AACA45;
     font-size: 20px;
 }
-#post-form {
+#title-contactUs {
     color: #AACA45;
-    border:1px solid #AACA45;
 }
-#post-form p {
+#title-contactUs p {
     color: white;
 }
 
@@ -35,74 +34,17 @@ nav {
     color: #AACA45;
     margin-bottom: 5rem;
 }
-main {
-    margin-bottom: 15rem;
-}
-h1 {
-    color: #AACA45;
-}
 
 @media (max-width: 991px){
     .sidebar {
         background-color: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(10px);
     }
 }
-
 .offcanvas {
     
     color: #AACA45;
 }
-
-#post-form {
-    width: 90%;
-    max-width: 650px;
-    align-items: center;
-}
-
-#name {
-    height: 3rem;
-    border: none;
-    color: white;
-    background-color: transparent;
-}
-#name:hover {
-    border: none;
-    height: 3rem;
-    color: white;
-    background-color: transparent;
-}
-#message {
-    border: none;
-    margin-bottom: 1rem;
-    height: 10rem;
-    color: white;
-    background-color: transparent;
-}
-#message:hover {
-    height: 10rem;
-
-}
-#btn {
-    width: 100px;
-    justify-content: end;
-    border-radius: 30px;
-    margin-bottom: 1rem;
-    height: 3rem;
-    border:1px solid #AACA45;
-    color: white;
-    background-color: #AACA45;
-    font-size: 20px;
-}
-#btn:hover {
-    border-radius: 30px;
-    margin-bottom: 1rem;
-    height: 3rem;
-    border:1px solid #B59CFE;
-    color: #B59CFE;
-    background-color: transparent;
-}
-
 
 #title-desc {
     font-size: 35px;
@@ -114,12 +56,10 @@ h1 {
     margin-bottom:5rem;
 }
 
-
 .card {
     background-color: rgb(32, 26, 50);
     color: white;
-    height: 40rem;
-    width: 22rem;
+    height: 35rem;
 }
 .icons:hover {
     color:#B59CFE
@@ -136,10 +76,7 @@ footer a {
     font-size: 18px;
 }
 
-#navmenu-app {
-    color: white;
-}
-#navmenu-item:hover {
+#nav-footer:hover {
     color: #B59CFE;
 }
 
@@ -192,22 +129,47 @@ svg:hover {
 
 }
 
-#sharedPost {
-    color: #AACA45; 
-    margin-top: 5rem
-}
-#sharedPost div {
-    color: white; 
+.flip-card {
+    background-color: transparent;
+    width: 30rem;
+    height: 30rem;
+    perspective: 1000px; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
     text-align: center;
-}
-#sharedPost button {
-    color: #ca4545;
-    background-color: transparent;
-    border-style: none;
-
-}
-#sharedPost button:hover {
-    color: #8c8c8c;
-    background-color: transparent;
-    border-style: none;
-}
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.15);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Voltea la tarjeta al hacer hover */
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    backface-visibility: hidden;
+    border-radius: 100%;
+  }
+  
+  .flip-card-front {
+    color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg); 
+    padding: 10px;
+  }
+  
+  .round-img {
+    border-radius: 100%;
+  }
