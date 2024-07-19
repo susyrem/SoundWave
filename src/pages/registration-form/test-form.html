@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./test-form.css">
+</head>
+<body>
+	<main>
+		<form action="" class="form" id="form">
+			<!-- Grupo: Usuario -->
+			<div class="form__group" id="group__user">
+				<label for="user" class="form__label">User</label>
+				<div class="form__group-input">
+					<input type="text" class="form__input" name="user" id="user" placeholder="john123">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Username must be 4 to 16 digits long and can only contain numbers, letters and underscores</p>
+			</div>
+
+			<!-- Grupo: Nombre -->
+			<div class="form__group" id="group__nombre">
+				<label for="nombre" class="form__label">Name</label>
+				<div class="form__group-input">
+					<input type="text" class="form__input" name="name" id="name" placeholder="John Doe">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Name must be 4 to 16 digits long and can only contain numbers, letters and underscores.</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="form__group" id="group__password">
+				<label for="password" class="form__label">Password</label>
+				<div class="form__group-input">
+					<input type="password" class="form__input" name="password" id="password">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Password must be 8 to 12 digits long.</p>
+			</div>
+
+			<!-- Grupo: Contraseña 2 -->
+			<div class="form__group" id="group__password2">
+				<label for="password2" class="form__label">Confirm password</label>
+				<div class="form__group-input">
+					<input type="password" class="form__input" name="password2" id="password2">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Both passwords must match.</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="form__group" id="group__email">
+				<label for="correo" class="form__label">Email</label>
+				<div class="form__group-input">
+					<input type="email" class="form__input" name="email" id="email" placeholder="email@email.com">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Email must be only contain letters, numbers and underscores</p>
+			</div>
+
+			<!-- Grupo: Teléfono -->
+			<div class="form__group" id="group__phone">
+				<label for="phone" class="form__label">Phone Number</label>
+				<div class="form__group-input">
+					<input type="text" class="form__input" name="phone" id="phone" placeholder="4491234567">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">The phone number can only contain numbers and the maximum length is 10 digits.</p>
+			</div>
+
+			<!-- Grupo: Terminos y Condiciones -->
+			<div class="form__group" id="group__therms">
+				<label class="form__label">
+					<input class="form__checkbox" type="checkbox" name="therms" id="therms">
+					I accept the therms and conditions.
+				</label>
+			</div>
+
+			<div class="form__message" id="form__message">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Please, complete the form correctly. </p>
+			</div>
+
+			<div class="form__group form__group-send-btn">
+				<button type="submit" class="form__btn">Send</button>
+				<p class="form__succesful-message" id="form__succesful-message">Form submitted succesfully!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="./test-form.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
