@@ -1,13 +1,12 @@
-var formulario = document.forms["postingform"];
+let formulario = document.forms["postingform"];
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  var n = formulario.elements[0];
-  var m = formulario.elements[1];
-
-  var name = n.value;
-  var message = m.value;
+  let n = formulario.elements[0];
+  let m = formulario.elements[1]  let
+  let name = n.value;
+  let message = m.value;
 
   // Resetting previous error styles
   n.classList.remove("error");
@@ -30,16 +29,16 @@ formulario.addEventListener("submit", (e) => {
 });
 
 const agregarPost = (name, message) => {
-  var lista = document.getElementById("sharedPost");
+  let lista = document.getElementById("sharedPost");
 
-  var elementPost = document.createElement("div");
+  let elementPost = document.createElement("div");
   elementPost.classList.add("element-post",);
   lista.appendChild(elementPost);
 
   createElement("Username", name, elementPost);
   createElement("Post", message, elementPost);
 
-  var botonBorrar = document.createElement("button");
+  let botonBorrar = document.createElement("button");
   botonBorrar.textContent = "Delete";
   botonBorrar.className = "btn-borrar"; // Use className to add classes
   elementPost.appendChild(botonBorrar);
@@ -50,7 +49,7 @@ const agregarPost = (name, message) => {
 };
 
 const createElement = (description, value, parentElement) => {
-  var spanName = document.createElement("span");
+  let spanName = document.createElement("span");
   spanName.textContent = description + ": " + value;
   parentElement.appendChild(spanName);
   parentElement.appendChild(document.createElement("br")); // Adding line break
