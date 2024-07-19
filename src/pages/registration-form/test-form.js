@@ -88,9 +88,9 @@ inputs.forEach((input) => {
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	const terminos = document.getElementById('therms');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
-		formulario.reset();
+	const therms = document.getElementById('therms');
+	if(campos.user && campos.name && campos.password && campos.email && campos.phone && therms.checked ){
+		form.reset();
 
 		document.getElementById('form__succesful-message').classList.add('form__active-succesful-message');
 		setTimeout(() => {
