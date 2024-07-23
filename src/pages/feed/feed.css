@@ -211,3 +211,39 @@ svg:hover {
     background-color: transparent;
     border-style: none;
 }
+
+
+/* esto es para spotify y las notificaciones */
+.spotify-player {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+}
+
+.notify{
+    position: absolute;
+}
+
+.container .notify::before{
+    position: absolute;
+    content: attr(data-count); 
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    padding: 3px 7px;
+    background: linear-gradient(#ff1a1a, #ff0000, #e60000);
+    border-radius: 50%;
+    line-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition:opaciity 0.1s ease-out;
+}
+
+.notify::add-numb::before{
+    opacity: 1;
+}
