@@ -53,9 +53,9 @@ inputs.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-	const userInput = document.getElementById('user').value;
-	const passwordInput = document.getElementById('password').value;
 	if(campos.user && campos.password){
+		const userInput = document.getElementById('user').value;
+		const passwordInput = document.getElementById('password').value;
 		saveUser(userInput, passwordInput);
 		form.reset();
 
