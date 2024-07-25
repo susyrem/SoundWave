@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign In</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./sign-in.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+</head>
+<body style="font-family: Fredoka; background-color: rgba(32, 26, 50, 0.945);">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a id="navbar-text-title" class="navbar-brand" href="/index.html">
+                    <img src="/public/img/LogoColorTrans.png" alt="Logo" width="50" class="align-middle me-2"
+                        id="navbar-text">
+                    SoundWave
+                </a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <i id="menu-icon" class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Sidebar -->
+                <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <!-- Sidebar Header -->
+                    <div class="offcanvas-header text">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end text-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a id="navbar-text" class="nav-link active" aria-current="page"
+                                    href="/src/pages/feed/feed.html">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="navbar-text" class="nav-link active" aria-current="page"
+                                    href="/src/pages/sign-in/sign-in.html">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+	</header>
+	<main>
+		<div id="title">
+			<h1>Sign In</h1>
+		</div>
+		
+		<form action="" class="form" id="form">
+		
+			<!-- Grupo: Usuario -->
+			<div class="form__group" id="group__user">
+				<label for="user" class="form__label">User</label>
+				<div class="form__group-input">
+					<input type="text" class="form__input" name="user" id="user" placeholder="john123">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Username must be 4 to 16 digits long and can only contain numbers, letters and underscores</p>
+			</div>
+
+			<!-- Grupo: Contraseña -->
+			<div class="form__group" id="group__password">
+				<label for="password" class="form__label">Password</label>
+				<div class="form__group-input">
+					<input type="password" class="form__input" name="password" id="password" placeholder="Password">
+					<i class="form__status-validate fas fa-times-circle"></i>
+				</div>
+				<p class="form__input-error">Password must be 8 to 12 digits long.</p>
+			</div>
+
+			<div class="form__group form__group-send-btn">
+				<button type="submit" class="form__btn">Sign In</button>
+				<p class="form__succesful-message" id="form__succesful-message">Succesfully!</p>
+			</div>
+		</form>
+	</main>
+	<footer id="navmenu-app" class="row">
+
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+	<script src="./sign-in.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script type="module" src="./footer.js"></script>
+	<script type="module" src="/src/pages/sign-in/sign-in.js"></script>
+</body>
+</html>

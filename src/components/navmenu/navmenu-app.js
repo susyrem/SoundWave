@@ -52,8 +52,8 @@ const navmenuApp = () => {
           <button id="subButton" class="mt-4">Subscribe</button>
         </form>
       </div>
-  `;
-  };
+`;
+}
   
   export { navmenuApp };
   

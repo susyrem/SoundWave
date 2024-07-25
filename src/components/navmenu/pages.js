@@ -19,13 +19,13 @@ const pages = [
     },
     {
       name: "Terms of Service",
-      url: "/src/pages/tos/tos.html",
+      url: "/src/pages/terms-conditions/terms-conditions.html",
       active: false,
       visible: true,
     },
     {
       name: "Privacy Policy",
-      url: "/src/pages/priv/priv.html",
+      url: "/src/pages/privacy-policy/privacy-policy.html",
       active: false,
       visible: true,
     },
