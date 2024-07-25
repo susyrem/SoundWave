@@ -48,6 +48,7 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validateForm);
 });
 
+// Esto ya funciona :'D
 const saveUser = (user, password) => {
 	const newUser = {
 		nameUser: user,
