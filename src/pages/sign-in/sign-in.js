@@ -11,6 +11,8 @@ const campos = {
 	password: false
 }
 
+
+
 const validateForm = (e) => {
 	switch (e.target.name) {
 
@@ -54,6 +56,7 @@ form.addEventListener('submit', (e) => {
 
 	const therms = document.getElementById('therms');
 	if(campos.user && campos.password){
+		saveUser(user,password);
 		form.reset();
 
 		document.getElementById('form__succesful-message').classList.add('form__active-succesful-message');
@@ -64,22 +67,22 @@ form.addEventListener('submit', (e) => {
 		document.querySelectorAll('.form__correct-group').forEach((icono) => {
 			icono.classList.remove('form__correct-group');
 		});
+
 	} else {
 		document.getElementById('form__message').classList.add('form__active-message');
 	}
 });
 
-document.getElementById('form').addEventListener('submit', function(event) {
-	event.preventDefault(); // Evitar el envío del formulario por defecto
+const saveUser = (user, password) => {
+	const newUser = {
+		nameUser: user,
+		passwordUser: password
+	};
 
-	// Obtener los valores de usuario y contraseña
-	let username = document.getElementById('user').value;
-	let password = document.getElementById('password').value;
+	let data = JSON.parse(localStorage.getItem('data')) || { posts: []};
+	localStorage.setItem('data', JSON.stringify(newUser));
 
-	// Almacenar en localStorage
-	localStorage.setItem('user', username);
-	localStorage.setItem('password', password);
-
-	// Limpiar el formulario (opcional)
-	document.getElementById('form').reset();
-});
+	
+	/* dataUsers.userName.push(newUser); // Agrega el nuevo post al array
+	saveUser(dataUsers); // Guarda los datos en localStorage */
+};
