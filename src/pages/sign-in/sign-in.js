@@ -88,3 +88,18 @@ form.addEventListener('submit', (e) => {
 		document.getElementById('form__message').classList.add('form__active-message');
 	}
 });
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+	event.preventDefault(); // Evitar el envío del formulario por defecto
+
+	// Obtener los valores de usuario y contraseña
+	let username = document.getElementById('user').value;
+	let password = document.getElementById('password').value;
+
+	// Almacenar en localStorage
+	localStorage.setItem('user', username);
+	localStorage.setItem('password', password);
+
+	// Limpiar el formulario (opcional)
+	document.getElementById('loginForm').reset();
+});
