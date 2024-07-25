@@ -53,10 +53,10 @@ inputs.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
-
-	const therms = document.getElementById('therms');
+	const userInput = document.getElementById('user').value;
+	const passwordInput = document.getElementById('password').value;
 	if(campos.user && campos.password){
-		saveUser(user,password);
+		saveUser(userInput, passwordInput);
 		form.reset();
 
 		document.getElementById('form__succesful-message').classList.add('form__active-succesful-message');
@@ -79,10 +79,7 @@ const saveUser = (user, password) => {
 		passwordUser: password
 	};
 
-	let data = JSON.parse(localStorage.getItem('data')) || { posts: []};
-	localStorage.setItem('data', JSON.stringify(newUser));
-
-	
-	/* dataUsers.userName.push(newUser); // Agrega el nuevo post al array
-	saveUser(dataUsers); // Guarda los datos en localStorage */
+	let data = JSON.parse(localStorage.getItem('data')) || { users: [] };
+	data.users.push(newUser);
+	localStorage.setItem('data', JSON.stringify(data));
 };
