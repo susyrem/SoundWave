@@ -2,24 +2,24 @@ const form = document.getElementById('form');
 const inputs = document.querySelectorAll('#form input');
 
 const expressions = {
-	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	user: /^[a-zA-Z0-9\_\-]{4,16}$/,
 	password: /^.{8,12}$/, // 8 a 12 digitos.
 }
 
 const campos = {
-	email: false,
+	user: false,
 	password: false
 }
 
 const validateForm = (e) => {
 	switch (e.target.name) {
 
-        case "email":
-			validateInput(expressions.email, e.target, 'email');
+        case "user":
+			validateInput(expressions.user, e.target, 'user');
 		break;
 		case "password":
 			validateInput(expressions.password, e.target, 'password');
-			validatePassword2();
+			
 		break;
 
 	}
@@ -43,26 +43,6 @@ const validateInput = (expressions, input, campo) => {
 	}
 }
 
-const validatePassword2 = () => {
-	const inputPassword1 = document.getElementById('password');
-	const inputPassword2 = document.getElementById('password2');
-
-	if(inputPassword1.value !== inputPassword2.value){
-		document.getElementById(`group__password2`).classList.add('form__incorrect-group');
-		document.getElementById(`group__password2`).classList.remove('form__correct-group');
-		document.querySelector(`#group__password2 i`).classList.add('fa-times-circle');
-		document.querySelector(`#group__password2 i`).classList.remove('fa-check-circle');
-		document.querySelector(`#group__password2 .form__input-error`).classList.add('form__input-error-active');
-		campos['password'] = false;
-	} else {
-		document.getElementById(`group__password2`).classList.remove('form__incorrect-group');
-		document.getElementById(`group__password2`).classList.add('form__correct-group');
-		document.querySelector(`#group__password2 i`).classList.remove('fa-times-circle');
-		document.querySelector(`#group__password2 i`).classList.add('fa-check-circle');
-		document.querySelector(`#group__password2 .form__input-error`).classList.remove('form__input-error-active');
-		campos['password'] = true;
-	}
-}
 
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validateForm);
@@ -73,7 +53,7 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const therms = document.getElementById('therms');
-	if(campos.user && campos.name && campos.password && campos.email && campos.phone && therms.checked ){
+	if(campos.user && campos.password){
 		form.reset();
 
 		document.getElementById('form__succesful-message').classList.add('form__active-succesful-message');
@@ -89,7 +69,7 @@ form.addEventListener('submit', (e) => {
 	}
 });
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('form').addEventListener('submit', function(event) {
 	event.preventDefault(); // Evitar el envío del formulario por defecto
 
 	// Obtener los valores de usuario y contraseña
@@ -101,5 +81,5 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 	localStorage.setItem('password', password);
 
 	// Limpiar el formulario (opcional)
-	document.getElementById('loginForm').reset();
+	document.getElementById('form').reset();
 });
