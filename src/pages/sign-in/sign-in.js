@@ -54,12 +54,12 @@ const saveUser = (user, password) => {
 		nameUser: user,
 		passwordUser: password
 	};
-	const prueba=JSON.parse(localStorage.getItem('data'))
+	const prueba=JSON.parse(localStorage.getItem('datasignin'))
 	console.log(prueba);
-	let data =prueba  || [];
-	console.log(data);
-	data.push(newUser);
-	localStorage.setItem('data', JSON.stringify(data));
+	let datasignin =prueba  || [];
+	console.log(datasignin);
+	datasignin.push(newUser);
+	localStorage.setItem('datasignin', JSON.stringify(datasignin));
 };
 
 form.addEventListener('submit', (e) => {
