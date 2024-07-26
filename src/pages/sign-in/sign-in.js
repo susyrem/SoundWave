@@ -82,7 +82,8 @@ form.addEventListener('submit', (e) => {
 	}
 
 	
-	//form.reset();
+	form.reset();
+	window.location.href = "/src/pages/feed/feed.html";
 	
 });
 
