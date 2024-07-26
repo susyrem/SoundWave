@@ -54,9 +54,11 @@ const saveUser = (user, password) => {
 		nameUser: user,
 		passwordUser: password
 	};
-
-	let data = JSON.parse(localStorage.getItem('data')) || { users: [] };
-	data.users.push(newUser);
+	const prueba=JSON.parse(localStorage.getItem('data'))
+	console.log(prueba);
+	let data =prueba  || [];
+	console.log(data);
+	data.push(newUser);
 	localStorage.setItem('data', JSON.stringify(data));
 };
 
@@ -79,8 +81,8 @@ form.addEventListener('submit', (e) => {
 		document.getElementById('form__message').classList.add('form__active-message');
 	}
 
-	saveUser(userInput, passwordInput);
-	form.reset();
+	
+	//form.reset();
 	
 });
 
