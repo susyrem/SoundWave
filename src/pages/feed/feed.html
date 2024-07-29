@@ -18,7 +18,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a id="navbar-text-title" class="navbar-brand" href="/index.html">
+                <a id="navbar-text-title" class="navbar-brand" href="#">
                     <img src="/public/img/LogoColorTrans.png" alt="Logo" width="50" class="align-middle me-2"
                         id="navbar-text">
                     SoundWave
@@ -50,6 +50,36 @@
             </div>
     </header>
 
+        <!-- Button trigger modal -->
+         <div class="container mt-5">
+            <div class="notify">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                      </svg>
+                  </button>
+            </div>
+         </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="notifications">
+            <h2>Notificaciones</h2>
+            <ul id="notificationList"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
             <!-- Posts -->
     <main>
         <h1 class="title-desc text-center mb-5">Feed</h1>
@@ -60,6 +90,16 @@
                 </div>
                 <div class="row justify-content-center text-start">
                     <textarea id="message" rows="4" placeholder="What are you listening to?"></textarea><br>
+                </div>
+                
+                <!-- <div class="row justify-content-center text-start">
+                    <label for="insertImage">Example file input</label>
+                    <input type="file"  class="form-control-file" id="insertImage" accept=".png,.jpg,.jpeg">
+                </div>
+                 -->
+
+                <div class="row justify-content-center text-start">
+                    <input class="" type="text" name="spotifyURL" id="spotifyURL" placeholder="URL de la canción de Spotify">
                 </div>
                 <button id="btn" type="submit">Send</button>
             </form>
@@ -76,7 +116,8 @@
           
     </main>
 
-     <!-- Footer -->
+     
+    <!-- Footer -->
     <footer id="navmenu-app" class="row">
 
 
@@ -85,8 +126,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/66c1aa2290.js" crossorigin="anonymous"></script>
-    <script type="module" src="./feed.js"></script>
-    <script type="module" src="./footer.js"></script>
+    <script type="module" src="/footer.js"></script>
+    <script type="module" src="/src/pages/feed/feed.js"></script>
 </body>
 
 </html>
