@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - SoundWave</title>
+    <link rel="stylesheet" href="userProfile1.css">
+    <link rel="stylesheet" href="feed.css">
+</head>
+<body style="font-family: Fredoka;">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a id="navbar-text-title" class="navbar-brand" href="/index.html">
+                    <img src="/public/img/LogoColorTrans.png" alt="Logo" width="50" class="align-middle me-2"
+                        id="navbar-text">
+                    SoundWave
+                </a>
+                
+            </div>
+    </header>
+    <main>
+        <div style="background-color:#B59CFE;" class="content">
+            <!--User Profile-->
+            <div class="right">
+              <main class="main-content">
+                  <div class="profile-header">
+                      <img src="default-profile.png" alt="Profile Image" id="profile-image" class="profile-image">
+                      <div class="profile-info">
+                          <h1 id="profile-name">Nombre del Usuario</h1>
+                          <p id="profile-description">DescripciÃ³n del perfil del usuario.</p>
+                          <button class="follow-button">Follow</button>
+                          <button class="editprofile-button" onclick="location.href='./editprofile.html'">Edit Profile</button>
+          
+                      </div>
+                  </div>
+    </main>
+</div>
+<div class="sidebar">
+    <div style="background-color:#B59CFE3;" class="sidebar1">
+        <!--Playlist-->
+                 <h2>Spotify Playlists</h2>
+              <button id="connect-spotify">Spotify</button>
+              <ul id="spotify-playlist-items"></ul>
+      </div>
+</div>
+<!-- Include JavaScript file -->
+<script src="userprofile1.js"></script>
+</body>
+</html>
+

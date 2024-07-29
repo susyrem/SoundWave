@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="./editprofile.css">
+</head>
+<body style="font-family: Fredoka;">
+    <!-- Formulario para personalizar perfil -->
+        <div class="form-container">
+            <h1>Edit Profile</h1>
+                <form id="profile-form">
+            <label for="profile-pic">Profile photo:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+            <button type="button" onclick="updateProfile()">Update Profile</button>
+            <a href="userprofile1.html" class="button">Close</a>
+        </form>
+    </div>
+
+    <script src="userprofile.js"></script>
+</body>
+</html>
