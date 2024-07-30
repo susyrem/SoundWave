@@ -14,6 +14,10 @@
 </head>
 
 <body style="font-family: Fredoka;">
+    <!-- Preloader -->
+    <div class="preloader">
+        <img class="loader" src="/public/img/ezgif.com-animated-gif-maker.gif" alt="">
+    </div>
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -27,6 +31,11 @@
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <i id="menu-icon" class="fa-solid fa-bars"></i>
                 </button>
+                
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="btn" type="submit">Search</button>
+                  </form>
 
                 <!-- Sidebar -->
                 <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar"
@@ -39,6 +48,15 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end text-center flex-grow-1 pe-3">
                             <li class="nav-item">
+                                    <div class="notify">
+                                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                                              </svg>
+                                          </button>
+                                    </div>
+                            </li>
+                            <li class="nav-item">
                                 <a id="navbar-text" class="nav-link active" aria-current="page" href="#">Sign In</a>
                             </li>
                             <li class="nav-item">
@@ -48,18 +66,8 @@
                     </div>
                 </div>
             </div>
+        </nav>
     </header>
-
-        <!-- Button trigger modal -->
-         <div class="container mt-5">
-            <div class="notify">
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
-                      </svg>
-                  </button>
-            </div>
-         </div>
 
   
   <!-- Modal -->
@@ -127,6 +135,7 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/66c1aa2290.js" crossorigin="anonymous"></script>
     <script type="module" src="/footer.js"></script>
+    <script type="module" src="/loader.js"></script>
     <script type="module" src="/src/pages/feed/feed.js"></script>
 </body>
 
