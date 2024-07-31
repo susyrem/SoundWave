@@ -1,3 +1,6 @@
+html {
+    scroll-snap-type: y mandatory;
+}
 #navbar-text {
     color: #AACA45;
     font-size: 18px;
@@ -69,6 +72,9 @@ main {
     margin-bottom: 15rem;
 }
 h1 {
+    color: #AACA45;
+}
+h2 {
     color: #AACA45;
 }
 
@@ -275,3 +281,6 @@ svg:hover {
     opacity: 1; /* Asegura que el pseudoelemento sea visible */
   }
 
+a{
+    color: #AACA45; 
+}
