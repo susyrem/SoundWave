@@ -32,10 +32,6 @@
                     <i id="menu-icon" class="fa-solid fa-bars"></i>
                 </button>
                 
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" id="btn" type="submit">Search</button>
-                  </form>
 
                 <!-- Sidebar -->
                 <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar"
@@ -47,6 +43,12 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end text-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <form class="form-inline my-2 my-lg-0">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                  </form>
+                            </li>
                             <li class="nav-item">
                                     <div class="notify">
                                         <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -99,12 +101,6 @@
                 <div class="row justify-content-center text-start">
                     <textarea id="message" rows="4" placeholder="What are you listening to?"></textarea><br>
                 </div>
-                
-                <!-- <div class="row justify-content-center text-start">
-                    <label for="insertImage">Example file input</label>
-                    <input type="file"  class="form-control-file" id="insertImage" accept=".png,.jpg,.jpeg">
-                </div>
-                 -->
 
                 <div class="row justify-content-center text-start">
                     <input class="" type="text" name="spotifyURL" id="spotifyURL" placeholder="URL de la canción de Spotify">

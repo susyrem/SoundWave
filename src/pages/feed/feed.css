@@ -47,6 +47,7 @@ body {
 }
 .form-inline {
     display: flex;
+    position: relative;
     justify-content: center;
     text-align:center;
     width: 20%;
