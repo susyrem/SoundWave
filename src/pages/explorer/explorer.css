@@ -2,17 +2,21 @@
     color: #AACA45;
     font-size: 18px;
 }
+
 #navbar-text:hover {
     color: #B59CFE;
     font-size: 18px;
 }
+
 #navbar-text-title {
     color: #AACA45;
     font-size: 20px;
 }
+
 #title-contactUs {
     color: #AACA45;
 }
+
 #title-contactUs p {
     color: white;
 }
@@ -20,6 +24,7 @@
 #menu-icon {
     color: #AACA45;
 }
+
 #menu-icon:hover {
     color: #B59CFE;
 }
@@ -28,17 +33,42 @@ body {
     background-color: rgba(32, 26, 50, 0.945);
 }
 
+.preloader {
+    background-color: #201A32;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.loader {
+    height: 160px;
+    width: 160px;
+    transition: all 0.5s;
+}
 
 nav {
     background-color: #201A32;
     color: #AACA45;
-    margin-bottom: 5rem;
+    margin-bottom: 0;
+    position: fixed;
 }
+
 main {
+    margin-top: 0;
     margin-bottom: 15rem;
 }
 
-@media (max-width: 991px){
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+@media (max-width: 991px) {
     .sidebar {
         background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(20px);
@@ -46,7 +76,7 @@ main {
 }
 
 .offcanvas {
-    
+
     color: #AACA45;
 }
 
@@ -55,70 +85,97 @@ main {
     max-width: 600px;
     align-items: center;
 }
-#name, #email, #message, #phone {
+
+#name,
+#email,
+#message,
+#phone {
     border-radius: 5px;
     margin-bottom: 1rem;
     height: 3rem;
-    border:1px solid #AACA45;
+    border: 1px solid #AACA45;
     color: white;
     background-color: transparent;
 }
-#name:hover, #email:hover, #phone:hover {
+
+#name:hover,
+#email:hover,
+#phone:hover {
     border-radius: 5px;
     margin-bottom: 1rem;
     height: 3rem;
-    border:1px solid #B59CFE;
+    border: 1px solid #B59CFE;
     color: white;
     background-color: transparent;
 }
+
 #message {
     height: 10rem;
 }
+
 #message:hover {
     height: 10rem;
     border: 1px solid #B59CFE;
 }
+
 #btn {
     width: 100px;
     align-items: center;
     border-radius: 30px;
     margin-bottom: 1rem;
     height: 3rem;
-    border:1px solid #AACA45;
+    border: 1px solid #AACA45;
     color: white;
     background-color: #AACA45;
     font-size: 20px;
 }
+
 #btn:hover {
     border-radius: 30px;
     margin-bottom: 1rem;
     height: 3rem;
-    border:1px solid #B59CFE;
+    border: 1px solid #B59CFE;
     color: #B59CFE;
     background-color: transparent;
 }
 
-
 #title-desc {
     font-size: 35px;
 }
+
 #description {
     font-size: 24px;
 }
+
 .icons:hover {
-    color:#B59CFE
+    color: #B59CFE
 }
-.p{
+
+.p {
     color: white;
     font-size: 24px;
 }
-h1{
+
+h1 {
+    color: #AACA45;
+    font-size: 24px;
+    size: 5px;
+}
+
+h2 {
     color: #AACA45;
     font-size: 24px;
 }
-h2{
-    color: #AACA45;
+
+a {
+    color: #201A32;
     font-size: 24px;
+}
+
+h4 {
+    color: #B59CFE;
+    font-size: 24px;
+    align-items: center;
 }
 
 footer a {
@@ -131,20 +188,24 @@ footer a {
     color: #B59CFE;
 }
 
-svg{
+svg {
     color: white;
     margin-top: 1rem;
     overflow: hidden;
 }
+
 svg:hover {
     color: #B59CFE;
 }
+
 .bi {
     color: #AACA45;
 }
+
 .bi:hover {
     color: #B59CFE;
 }
+
 #sub {
     margin-right: 6rem;
 }
@@ -156,14 +217,14 @@ svg:hover {
     background: transparent;
     color: #AACA45;
     padding: .2rem .5rem;
-    
+
 }
 
 #subButton:hover {
     border-radius: 1.5rem;
     border-color: #AACA45;
     border-style: solid;
-    background:#AACA45;3
+    background:#AACA45;
     color: white;
     padding: .2rem .5rem;
 }
@@ -173,9 +234,31 @@ svg:hover {
     border-style: none;
     background-color: rgb(204, 204, 204);
     padding: .2rem .5rem;
-
 }
+
 #subInput:hover {
     background-color: rgb(158, 158, 158);
+}
 
+iframe {
+    position: relative;
+    top: 5px;
+    left: 100px;
+}
+
+.carouselExample {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-inner>.carousel-item>a>img {
+    width: 250px;
+    height: 650px;
+}
+
+.card {
+    background-color: #B59CFE;
+    border-radius: 7%;
 }
