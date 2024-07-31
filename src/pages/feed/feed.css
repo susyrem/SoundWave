@@ -275,3 +275,65 @@ svg:hover {
     opacity: 1; /* Asegura que el pseudoelemento sea visible */
   }
 
+
+  /* Estilos para los modales */
+.modal-content {
+    background-color: #201A32;
+    border: 1px solid #AACA45;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid #AACA45;
+}
+
+.modal-title {
+    color: #AACA45;
+    font-size: 20px;
+}
+
+.btn-close {
+    color: #AACA45;
+}
+
+.btn-close:hover {
+    color: #B59CFE;
+}
+
+.modal-footer {
+    border-top: 1px solid #AACA45;
+}
+
+.btn-secondary {
+    background-color: #AACA45;
+    color: white;
+    border: 1px solid #AACA45;
+}
+
+.btn-secondary:hover {
+    background-color: transparent;
+    color: #B59CFE;
+    border: 1px solid #B59CFE;
+}
+
+#notifications {
+    background-color: #201A32;
+    color: white;
+}
+
+#notificationList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#notificationList li {
+    padding: 10px;
+    border-bottom: 1px solid #AACA45;
+}
+
+#notificationList li:hover {
+    background-color: #AACA45;
+    color: #201A32;
+}

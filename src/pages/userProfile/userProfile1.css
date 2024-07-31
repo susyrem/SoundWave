@@ -11,6 +11,7 @@ body{
     display: flex;
     height: auto;
     margin-bottom: 1%;
+    background-color: #2A253B;
 }
 
 @media (max-width: 991px){
@@ -23,19 +24,19 @@ body{
 .sidebarDerecha {
     padding: 20px;
     width: 64%;
-    border-radius: 12%;
-    margin-top: 3%;
+    border-radius: 8%;
+    margin-top: 2%;
     margin-left: 3%;
     margin-right: 3%;
-    height: 100%;
-    background-color: #B69CFF;
+    height:fit-content;
+    background-color: #211b32;
     overflow: hidden;
 }
 
 .sidebarIzquierda {
     padding: 20px;
     width: 30%;
-    background-color: #4caf50;
+    background-color: #211B32;
     border-radius: 12%;
     margin-top: 3%;
     margin-left: 3%;
@@ -45,6 +46,7 @@ body{
 .spotifyTitulo {
     text-align: center;
     font-size: 2vw;
+    color: #AACA45;
 }
 
 
@@ -59,13 +61,13 @@ body{
 
 .profile-header {
     display: grid;
-    grid-template-rows: 35% 65%;
-    height: 100vh;
 }
 
 .imagenes {
+    margin-top: 1%;
     background-color: #B69CFF;
     position: relative;
+
 }
 
 .Background-image {
@@ -97,7 +99,8 @@ body{
     object-fit: cover;
 }
 
-.profile-info {}
+.profile-info {
+}
 
 .profile-info h1 {
     font-size: 24px;
@@ -117,7 +120,7 @@ body{
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px;
+    margin-bottom: 1%;
 }
 
 .follow-button:hover,
@@ -130,7 +133,7 @@ body{
 }
 
 .editprofile-button:hover {
-    background-color: #268FBE;
+    background-color: #B69CFF;
 }
 
 @media (max-width: 768px) {

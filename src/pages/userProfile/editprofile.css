@@ -1,3 +1,4 @@
+/* Estilo para el body */
 body {
     display: flex;
     justify-content: center;
@@ -7,6 +8,7 @@ body {
     background-color: rgba(32, 26, 50, 0.945);
 }
 
+/* Fondo del perfil de edición */
 .editprofileFondo {
     display: flex;
     justify-content: center;
@@ -16,9 +18,11 @@ body {
     background-color: #201A32;
 }
 
+/* Títulos */
 h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: #B59CFE;
 }
 
 /* Estilo de contenedor */
@@ -26,7 +30,7 @@ h1 {
     max-width: 600px;
     width: 100%;
     padding: 20px;
-    background-color: #B69CFE;
+    background-color: #201A32;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -40,21 +44,19 @@ form {
 label {
     margin-bottom: 8px;
     font-weight: bold;
-    border-radius: 15px;
+    color: #AACA45;
 }
 
 input[type="file"],
-input[type="date"] {
-    margin-bottom: 16px;
-    border-radius: 15px;
-}
-
+input[type="date"],
 input[type="text"],
 textarea {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #AACA45;
     border-radius: 15px;
     margin-bottom: 16px;
+    background-color: #201A32;
+    color: white;
 }
 
 textarea {
@@ -65,27 +67,26 @@ textarea {
 /* Estilo del botón */
 button,
 a.button {
-    font-family: fredoka;
     padding: 10px 20px;
     border: none;
     border-radius: 15px;
-    background-color: #aac245;
-    color: black;
+    background-color: #AACA45;
+    color: #201A32;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover,
 a.button:hover {
-    background-color: #3ddb90;
-    border-radius: 15px;
+    background-color: #B59CFE;
+    color: white;
 }
 
-/* Ajustar diseño de forms */
-form> {
+form > * {
     margin-bottom: 16px;
 }
