@@ -1,0 +1,282 @@
+
+#navbar-text {
+    color: #AACA45;
+    font-size: 18px;
+}
+#navbar-text:hover {
+    color: #B59CFE;
+    font-size: 18px;
+}
+#navbar-text-title {
+    color: #AACA45;
+    font-size: 20px;
+}
+
+#menu-icon {
+    color: #AACA45;
+}
+#menu-icon:hover {
+    color: #B59CFE;
+}
+
+
+body {
+	background-color: #201A32;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	color: #AACA45;
+}
+
+nav {
+    background-color: #201A32;
+    color: #AACA45;
+    margin-bottom: 0;
+    
+}
+main {
+    margin-top: 0;
+    margin-bottom: 15rem;
+}
+#title {
+	margin-top: 5rem;
+}
+h1 {
+    text-align: center;
+	
+}
+.form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	margin-top: 3rem;
+	
+}
+
+.form__label {
+	display: block;
+	font-weight: 500;
+	padding: 10px;
+	cursor: pointer;
+	color: #AACA45;
+}
+
+.form__group-input { 
+	position: relative;
+}
+
+.form__input {
+	width: 100%;
+	background: transparent;
+	border: 1px solid #AACA45 ;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+	color: rgb(204, 204, 204);
+}
+
+.form__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.form__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.form__input-error-active {
+	display: block;
+}
+
+.form__status-validate {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.form__checkbox {
+	margin-right: 10px;
+}
+
+.form__therms-group, 
+.form__message,
+.form__group-send-btn {
+	grid-column: span 2;
+}
+
+.form__message {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.form__active.message {
+	display: block;
+}
+
+.form__message p {
+	margin: 0;
+}
+
+.form__group-send-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.form__btn {
+	border-radius: 1.5rem;
+    border-color: #AACA45;
+    border-style: solid;
+    background: transparent;
+    color: #AACA45;
+    padding: .2rem 1rem;
+}
+
+.form__btn:hover {
+	border-radius: 1.5rem;
+    border-color: #AACA45;
+    border-style: solid;
+    background:#AACA45;
+    color: white;
+    padding: .2rem 1rem;
+}
+
+.form__succesful-message {
+	font-size: 14px;
+	color: #AACA45;
+	display: none;
+}
+
+.form__active-succesful-message {
+	display: block;
+}
+
+#group__therms a {
+	text-decoration: none;
+	color: #B59CFE;
+}
+/* ----- -----  Estilos para Validacion ----- ----- */
+.form__correct-group .form__status-validate {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.form__incorrect-group .form__label {
+	color: #bb2929;
+}
+
+.form__incorrect-group .form__status-validate {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.form__incorrect-group .form__input {
+	border: 3px solid #bb2929;
+}
+
+footer {
+    
+}
+
+
+footer h2 {
+    color: #AACA45;
+    font-size: 24px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+#navmenu-app {
+    color: white;
+    padding-top: 5rem;
+}
+#navmenu-item:hover {
+    color: #B59CFE;
+}
+
+svg{
+    color: white;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+svg:hover {
+    color: #B59CFE;
+}
+.bi {
+    color: #AACA45;
+}
+.bi:hover {
+    color: #B59CFE;
+}
+#sub {
+    margin-right: 6rem;
+}
+
+#subButton {
+    border-radius: 1.5rem;
+    border-color: #AACA45;
+    border-style: solid;
+    background: transparent;
+    color: #AACA45;
+    padding: .2rem .5rem;
+    
+}
+
+#subButton:hover {
+    border-radius: 1.5rem;
+    border-color: #AACA45;
+    border-style: solid;
+    background:#AACA45;
+    color: white;
+    padding: .2rem .5rem;
+}
+
+#subInput {
+    border-radius: 1.5rem;
+    border-style: none;
+    background-color: rgb(204, 204, 204);
+    padding: .2rem .5rem;
+
+}
+#subInput:hover {
+    background-color: rgb(158, 158, 158);
+
+}
+
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.form {
+		grid-template-columns: 1fr;
+	}
+
+	.form__therms-group, 
+	.form__message,
+	.form__group-send-btn {
+		grid-column: 1;
+	}
+
+	.form__btn {
+		width: 100%;
+	}
+}
