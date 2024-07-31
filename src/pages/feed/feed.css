@@ -283,4 +283,40 @@ svg:hover {
 
 a{
     color: #AACA45; 
+   
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
+    color: #B59CFE;
+}
+.sidebarDerecha {
+    padding: 100px;
+    width: 65%;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+   
+    background-color: #211b32;
+   
+}
+
+.sidebarIzquierda {
+    padding: 20px;
+    width: 20%;
+    background-color: #211B32;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height:fit-content;
+    overflow: hidden;
+
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15rem;
 }
