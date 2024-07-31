@@ -1,24 +1,39 @@
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const lista = document.getElementById("sharedPost");
     const formulario = document.forms["postingform"];
-    const clearPostsButton = document.getElementById('clearPosts');
-
-    // Función para cargar los posts desde localStorage
-    const cargarPosts = () => {
-        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+    const notificationList = document.getElementById("notificationList");
+   
+    // Función para cargar los datos desde localStorage
+    const cargarDatos = () => {
+        const data = JSON.parse(localStorage.getItem('data')) || { posts: [], notifications: [] };
         lista.innerHTML = ''; // Limpiar la lista antes de renderizar los posts
+        notificationList.innerHTML = ''; // Limpiar la lista antes de renderizar las notificaciones
 
-        posts.forEach(post => {
-            renderizarPost(post);
+        // Renderizar posts
+        data.posts.forEach((post, index) => {
+            renderizarPost(post, index);
+        });
+
+        // Renderizar notificaciones
+        data.notifications.forEach((notification, index) => {
+            renderizarNotification(notification, index);
         });
     };
 
-    // Función para guardar los posts en localStorage
-    const guardarPosts = (posts) => {
-        localStorage.setItem('posts', JSON.stringify(posts));
+    // Función para guardar los datos en localStorage
+    const guardarDatos = (data) => {
+        localStorage.setItem('data', JSON.stringify(data));
     };
+
+    // Función para renderizar una notificación en la interfaz
+    const renderizarNotification = (notification, index) => {
+        const li = document.createElement('li');
+        li.textContent = notification;
+        li.dataset.index = index;
+        notificationList.appendChild(li);
+    };
+
+
 
     // Función para renderizar un post en la interfaz
     const renderizarPost = (post, index) => {
@@ -81,6 +96,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cardText2.textContent = post.mensaje;
         cardBody2.appendChild(cardText2);
 
+         // Crear el reproductor de Spotify si hay un enlace de canción
+         if (post.spotifyUrl) {
+            const spotifyPlayer = document.createElement('div');
+            spotifyPlayer.className = 'spotify-player';
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://open.spotify.com/embed/track/${getSpotifyTrackId(post.spotifyUrl)}`;
+            iframe.width = "300";
+            iframe.height = "80";
+            iframe.frameBorder = "0";
+            iframe.allow = "encrypted-media";
+            
+            spotifyPlayer.appendChild(iframe);
+            cardBody2.appendChild(spotifyPlayer);
+        }
+
+        
+
         const divFlex = document.createElement('div');
         divFlex.className = 'd-flex justify-content-end align-items-center';
 
@@ -96,12 +129,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const index = parseInt(elementPost.dataset.index);
             // Eliminar el post del array y de localStorage
             if (index !== -1) {
-                let posts = JSON.parse(localStorage.getItem('posts')) || [];
-                posts.splice(index, 1);
-                guardarPosts(posts); // Guardar los cambios en localStorage
+                let data = JSON.parse(localStorage.getItem('data')) || { posts: [], notifications: [] };
+                data.posts.splice(index, 1);
+                data.notifications.splice(index, 1); // Eliminar la notificación correspondiente
+                guardarDatos(data); // Guardar los cambios en localStorage
                 elementPost.remove(); // Eliminar el post del DOM
-            }
-        });
+                cargarDatos(); // Volver a cargar los datos
+                const notify=document.querySelector('.notify');
+                const newCount =data.notifications.length;
+                notify.setAttribute('data-count',newCount);
+                if(newCount>0){
+                    notify.classList.add('add-numb');
+                }
+                    }
+                });
 
         divFlex.appendChild(botonBorrar);
         cardBody2.appendChild(divFlex);
@@ -112,23 +153,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
         lista.appendChild(elementPost);
     };
 
+     // Función para obtener el ID de la pista de Spotify desde la URL
+     const getSpotifyTrackId = (url) => {
+        const match = url.match(/track\/([a-zA-Z0-9]{22})/);
+        return match ? match[1] : '';
+    };
+
     // Función para agregar un nuevo post
-    const agregarPost = (name, message) => {
+    const agregarPost = (name, message,spotifyUrl) => {
         const nuevoPost = {
             nombre: name,
             mensaje: message,
+            spotifyUrl:spotifyUrl || '',
+            notification: `${name} ha compartido una publicación`, // Usar la variable `name`
             fecha: new Date().toLocaleDateString(),
             imagen: "https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg"
         };
 
-        let posts = JSON.parse(localStorage.getItem('posts')) || [];
-        posts.push(nuevoPost); // Agrega el nuevo post al array
-        guardarPosts(posts); // Guarda los posts en localStorage
-        renderizarPost(nuevoPost, posts.length - 1); // Renderiza el nuevo post en la interfaz de usuario
+        let data = JSON.parse(localStorage.getItem('data')) || { posts: [], notifications: [] };
+        data.posts.push(nuevoPost); // Agrega el nuevo post al array
+        data.notifications.push(nuevoPost.notification); // Agrega la notificación al array
+        guardarDatos(data); // Guarda los datos en localStorage
+        renderizarPost(nuevoPost, data.posts.length - 1); // Renderiza el nuevo post en la interfaz
+        renderizarNotification(nuevoPost.notification, data.notifications.length - 1); // Renderiza la nueva notificación en la interfaz
+
+        const notify=document.querySelector('.notify');
+        const newCount =data.notifications.length;
+        notify.setAttribute('data-count',newCount);
+        if(newCount>0){
+            notify.classList.add('add-numb');
+        }
     };
 
-    // Cargar los posts al iniciar la aplicación
-    cargarPosts();
+    // Cargar los datos al iniciar la aplicación
+    cargarDatos();
 
     // Manejar el envío del formulario para agregar posts
     formulario.addEventListener("submit", (event) => {
@@ -136,6 +194,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         const name = formulario.elements[0].value;
         const message = formulario.elements[1].value;
+        const spotifyUrl=formulario.elements[2].value;
 
         // Validar campos antes de agregar el post
         if (name.trim().length === 0 || message.trim().length === 0) {
@@ -143,15 +202,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
 
-        agregarPost(name, message);
+        agregarPost(name, message,spotifyUrl);
 
         // Resetear el formulario después de agregar el post
         formulario.reset();
     });
 
-    // Manejar el borrado de todos los posts
-    clearPostsButton.addEventListener('click', () => {
-        localStorage.removeItem('posts');
-        lista.innerHTML = ''; // Limpiar la lista en el DOM
-    });
 });

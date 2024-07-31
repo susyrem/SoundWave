@@ -14,6 +14,9 @@
 
 </head>
 <body style="font-family: Fredoka; background-color: rgba(32, 26, 50, 0.945);">
+	<div class="preloader">
+        <img class="loader" src="/public/img/ezgif.com-animated-gif-maker.gif" alt="">
+    </div>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
@@ -43,7 +46,7 @@
                             </li>
                             <li class="nav-item">
                                 <a id="navbar-text" class="nav-link active" aria-current="page"
-                                    href="/src/pages/feed/feed.html">Sign Up</a>
+                                    href="/src/pages/sign-in/sign-in.html">Sign Up</a>
                             </li>
                         </ul>
                     </div>
@@ -58,14 +61,14 @@
 		
 		<form action="" class="form" id="form">
 		
-			<!-- Grupo: Correo Electronico -->
-			<div class="form__group" id="group__email">
-				<label for="correo" class="form__label">Email</label>
+			<!-- Grupo: Usuario -->
+			<div class="form__group" id="group__user">
+				<label for="user" class="form__label">User</label>
 				<div class="form__group-input">
-					<input type="email" class="form__input" name="email" id="email" placeholder="email@email.com">
+					<input type="text" class="form__input" name="user" id="user" placeholder="john123">
 					<i class="form__status-validate fas fa-times-circle"></i>
 				</div>
-				<p class="form__input-error">Email must be only contain letters, numbers and underscores</p>
+				<p class="form__input-error">Username must be 4 to 16 digits long and can only contain numbers, letters and underscores</p>
 			</div>
 
 			<!-- Grupo: Contraseña -->
@@ -84,13 +87,16 @@
 			</div>
 		</form>
 	</main>
-	<footer id="navmenu-app" class="row">
+	<!-- Footer -->
+    <footer id="navmenu-app" class="row">
 
-	</footer>
+
+    </footer>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-	<script src="./sign-in.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script type="module" src="./footer.js"></script>
+	<script type="module" src="/footer.js"></script>
+	<script type="module" src="/loader.js"></script>
+	<script type="module" src="/src/pages/sign-in/sign-in.js"></script>
 </body>
 </html>

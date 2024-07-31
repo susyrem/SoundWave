@@ -28,7 +28,37 @@
 body {
     background-color: rgba(32, 26, 50, 0.945);
 }
+.preloader {
+    background-color: #201A32;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
 
+.loader {
+    height: 160px;
+    width: 160px;
+    transition: all 0.5s;
+}
+.form-inline {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align:center;
+    width: 20%;
+
+  }
+
+.form-control {
+    color:#201A32; /* Cambia el color del texto del input */
+    background-color: #201A32; /* Cambia el color de fondo del input */
+    border: 1px solid #AACA45; /* Cambia el color del borde del input */
+  }
 
 nav {
     background-color: #201A32;
@@ -135,10 +165,11 @@ footer a {
     color: white;
     font-size: 18px;
 }
-#navmenu-app a {
+
+#navmenu-app {
     color: white;
 }
-#navmenu-app a:hover {
+#navmenu-item:hover {
     color: #B59CFE;
 }
 
@@ -210,3 +241,37 @@ svg:hover {
     background-color: transparent;
     border-style: none;
 }
+
+
+/* esto es para spotify y las fficaciones */
+.spotify-player {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+}
+
+.notify {
+    position: relative; /* Cambiado de absolute a relative para que el pseudoelemento se posicione correctamente */
+  }
+  
+  .notify::before {
+    content: attr(data-count);
+    position: relative;
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: 1px 9px;
+    background: linear-gradient(#ff1a1a, #ff0000, #e60000);
+    border-radius: 50%;
+    line-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
+    opacity: 1; /* Asegura que el pseudoelemento sea visible */
+  }
+

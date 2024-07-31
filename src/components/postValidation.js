@@ -4,7 +4,7 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let n = formulario.elements[0];
-  let m = formulario.elements[1]  let
+  let m = formulario.elements[1];
   let name = n.value;
   let message = m.value;
 
