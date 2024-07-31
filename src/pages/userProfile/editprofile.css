@@ -1,11 +1,19 @@
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #201b32;
+    background-color: rgba(32, 26, 50, 0.945);
+}
+
+.editprofileFondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #201A32;
 }
 
 h1 {
@@ -19,7 +27,7 @@ h1 {
     width: 100%;
     padding: 20px;
     background-color: #B69CFE;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,22 +35,25 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    }
+}
 
 label {
     margin-bottom: 8px;
     font-weight: bold;
+    border-radius: 15px;
 }
 
-input[type="file"] {
+input[type="file"],
+input[type="date"] {
     margin-bottom: 16px;
+    border-radius: 15px;
 }
 
 input[type="text"],
 textarea {
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 15px;
     margin-bottom: 16px;
 }
 
@@ -57,7 +68,7 @@ a.button {
     font-family: fredoka;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 15px;
     background-color: #aac245;
     color: black;
     font-size: 16px;
@@ -71,9 +82,10 @@ a.button {
 button:hover,
 a.button:hover {
     background-color: #3ddb90;
+    border-radius: 15px;
 }
 
 /* Ajustar diseño de forms */
-form > {
+form> {
     margin-bottom: 16px;
 }
