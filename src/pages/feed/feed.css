@@ -260,13 +260,13 @@ svg:hover {
   
   .notify::before {
     content: attr(data-count);
-    position: absolute;
-    top: -1px;
-    right: 1px;
-    font-size: 20px;
+    position: relative;
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
-    padding: 9px 9px;
+    padding: 1px 9px;
     background: linear-gradient(#ff1a1a, #ff0000, #e60000);
     border-radius: 50%;
     line-height: 100%;
@@ -274,3 +274,4 @@ svg:hover {
     transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
     opacity: 1; /* Asegura que el pseudoelemento sea visible */
   }
+
