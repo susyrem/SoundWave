@@ -290,24 +290,18 @@ a{
     color: #B59CFE;
 }
 .sidebarDerecha {
-    padding: 100px;
-    width: 65%;
-    border-radius: 5%;
-    margin-top: 3%;
-    margin-left: 3%;
-    margin-right: 3%;
    background-color: #211b32;
+   border-radius: 5%;
+   margin-right: 10%;
 }
 .sidebarIzquierda {
-    padding: 20px;
-    width: 20%;
+    padding: 30px;
+    width: 40%;
     background-color: #211B32;
     border-radius: 5%;
-    margin-top: 3%;
-    margin-left: 3%;
-    margin-right: 3%;
-    height:fit-content;
-    overflow: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+   
 
 }
 .main-content {
