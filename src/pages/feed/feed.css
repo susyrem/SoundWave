@@ -1,3 +1,6 @@
+html {
+    scroll-snap-type: y mandatory;
+}
 #navbar-text {
     color: #AACA45;
     font-size: 18px;
@@ -28,7 +31,37 @@
 body {
     background-color: rgba(32, 26, 50, 0.945);
 }
+.preloader {
+    background-color: #201A32;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
 
+.loader {
+    height: 160px;
+    width: 160px;
+    transition: all 0.5s;
+}
+.form-inline {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align:center;
+    width: 20%;
+
+  }
+
+.form-control {
+    color:#201A32; /* Cambia el color del texto del input */
+    background-color: #201A32; /* Cambia el color de fondo del input */
+    border: 1px solid #AACA45; /* Cambia el color del borde del input */
+  }
 
 nav {
     background-color: #201A32;
@@ -39,6 +72,9 @@ main {
     margin-bottom: 15rem;
 }
 h1 {
+    color: #AACA45;
+}
+h2 {
     color: #AACA45;
 }
 
@@ -213,7 +249,7 @@ svg:hover {
 }
 
 
-/* esto es para spotify y las notificaciones */
+/* esto es para spotify y las fficaciones */
 .spotify-player {
     margin-top: 10px;
     display: flex;
@@ -224,26 +260,63 @@ svg:hover {
     position: relative;
 }
 
-.notify{
-    position: absolute;
-}
-
-.container .notify::before{
-    position: absolute;
-    content: attr(data-count); 
-    top: -10px;
-    right: -10px;
-    font-size: 14px;
+.notify {
+    position: relative; /* Cambiado de absolute a relative para que el pseudoelemento se posicione correctamente */
+  }
+  
+  .notify::before {
+    content: attr(data-count);
+    position: relative;
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
     font-weight: bold;
     color: #fff;
-    padding: 3px 7px;
+    padding: 1px 9px;
     background: linear-gradient(#ff1a1a, #ff0000, #e60000);
     border-radius: 50%;
     line-height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    transition:opaciity 0.1s ease-out;
+    transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
+    opacity: 1; /* Asegura que el pseudoelemento sea visible */
+  }
+
+a{
+    color: #AACA45; 
+   
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
+    color: #B59CFE;
+}
+.sidebarDerecha {
+    padding: 100px;
+    width: 65%;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+   
+    background-color: #211b32;
+   
 }
 
-.notify::add-numb::before{
-    opacity: 1;
+.sidebarIzquierda {
+    padding: 20px;
+    width: 20%;
+    background-color: #211B32;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height:fit-content;
+    overflow: hidden;
+
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15rem;
 }
