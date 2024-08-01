@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: rgba(32, 26, 50, 0.945);
+    background-color:rgba(32, 26, 50, 0.945);
 }
 
 /* Fondo del perfil de edición */
@@ -23,6 +23,12 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #B59CFE;
+}
+
+.editProfileTitle {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #AACA45;
 }
 
 /* Estilo de contenedor */
@@ -65,7 +71,7 @@ textarea {
 }
 
 /* Estilo del botón */
-button,
+.buttonRound,
 a.button {
     padding: 10px 20px;
     border: none;
