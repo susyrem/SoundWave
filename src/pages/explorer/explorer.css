@@ -266,17 +266,29 @@ iframe {
     text-align: center;
     align-items: center;
     justify-content: center;
+    
+}
+.carousel-inner>.carousel-item>a>img {
+width: 250px;
+height: 650px;
+text-align: center;
+align-items: center;
+justify-content: center
 }
 
-.carousel-inner>.carousel-item>a>img {
-    width: 250px;
-    height: 650px;
-}
+
 
 .card {
     background-color: #B59CFE;
     border-radius: 7%;
 }
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Estilo del formulario para centrarlo */
 .form-inline {
     display: flex;
     justify-content: center;
@@ -298,9 +310,6 @@ iframe {
 }
 /* Estilo adicional para el foco */
 .form-control:focus {
-    border-color: #AACA45; /* Cambia el color del borde al hacer foco */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-}
 @media (max-width: 768px) {
     .title-desc {
         font-size: 1.5em;

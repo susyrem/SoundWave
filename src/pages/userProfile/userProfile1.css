@@ -43,7 +43,7 @@ body {
 .sidebarDerecha {
     padding: 20px;
     width: 64%;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-top: 2%;
     margin-left: 3%;
     margin-right: 3%;
@@ -56,7 +56,7 @@ body {
     padding: 20px;
     width: 30%;
     background-color: #211B32;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-top: 3%;
     margin-left: 3%;
 
@@ -264,7 +264,6 @@ h1 {
     height: 10rem;
 
 }
-
 #btn {
     width: 100px;
     justify-content: end;
@@ -276,7 +275,6 @@ h1 {
     background-color: #AACA45;
     font-size: 20px;
 }
-
 #btn:hover {
     border-radius: 30px;
     margin-bottom: 1rem;
@@ -285,13 +283,13 @@ h1 {
     color: #B59CFE;
     background-color: transparent;
 }
-
 .logout {
     border: 1px solid #AACA45;
     color: white;
     background-color: #AACA45;
+    border-radius: 20px;
+    width: 100px;
 }
-
 .logout:hover {
     border: 1px solid #B59CFE;
     color: #B59CFE;
@@ -551,4 +549,48 @@ svg:hover {
     /* Cambia el color de fondo del input */
     border: 1px solid #AACA45;
     /* Cambia el color del borde del input */
+}
+/* Estilo del formulario para centrarlo */
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Estilo de la barra de búsqueda */
+.form-control {
+    width: 250px; /* Ajusta el ancho de la barra de búsqueda */
+    padding: 8px 12px; /* Ajusta el padding para hacerla más delgada */
+    border-radius: 20px; /* Redondea los bordes */
+    border: 1px solid #AACA45;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 8px; /* Espacio entre la barra de búsqueda y el botón */
+}
+/* Estilo del botón */
+.btn-outline-success {
+    border-radius: 20px; /* Redondea los bordes del botón */
+}
+/* Estilo adicional para el foco */
+.form-control:focus {
+@media (max-width: 768px) {
+    .title-desc {
+        font-size: 1.5em;
+    }
+    .container {
+        width: 95%;
+    }
+    ul.list {
+        padding-left: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .title-desc {
+        font-size: 1.2em;
+    }
+    figcaption.blockquote-footer {
+        font-size: 0.7em;
+    }
+    .container {
+        width: 100%;
+    }
 }
