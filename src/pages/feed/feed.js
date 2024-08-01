@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         colDiv.appendChild(cardDiv);
         rowDiv.appendChild(colDiv);
         elementPost.appendChild(rowDiv);
-        lista.appendChild(elementPost);
+        lista.prepend(elementPost);
     };
 
      // Función para obtener el ID de la pista de Spotify desde la URL
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             mensaje: message,
             spotifyUrl:spotifyUrl || '',
             notification: `${name} ha compartido una publicación`, // Usar la variable `name`
-            fecha: new Date().toLocaleDateString(),
+            fecha: new Date().toLocaleString(),
             imagen: "https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg"
         };
 

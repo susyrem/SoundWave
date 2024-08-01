@@ -1,5 +1,5 @@
-body{
-    background-color:rgba(32, 26, 50, 0.945);
+body {
+    background-color: rgba(32, 26, 50, 0.945);
 }
 
 .sidebarIzquierda,
@@ -11,32 +11,52 @@ body{
     display: flex;
     height: auto;
     margin-bottom: 1%;
+    background-color: #2A253B;
 }
 
-@media (max-width: 991px){
+@media (max-width: 991px) {
     .content {
         background-color: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(20px);
     }
 }
 
+.notify::before {
+    content: attr(data-count);
+    position: relative;
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: 1px 9px;
+    background: linear-gradient(#ff1a1a, #ff0000, #e60000);
+    border-radius: 50%;
+    line-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: opacity 0.1s ease-out;
+    /* Corregido a 'opacity' */
+    opacity: 1;
+    /* Asegura que el pseudoelemento sea visible */
+}
+
 .sidebarDerecha {
     padding: 20px;
     width: 64%;
-    border-radius: 12%;
-    margin-top: 3%;
+    border-radius: 5%;
+    margin-top: 2%;
     margin-left: 3%;
     margin-right: 3%;
-    height: 100%;
-    background-color: #B69CFF;
+    height: fit-content;
+    background-color: #211b32;
     overflow: hidden;
 }
 
 .sidebarIzquierda {
     padding: 20px;
     width: 30%;
-    background-color: #4caf50;
-    border-radius: 12%;
+    background-color: #211B32;
+    border-radius: 5%;
     margin-top: 3%;
     margin-left: 3%;
 
@@ -45,8 +65,26 @@ body{
 .spotifyTitulo {
     text-align: center;
     font-size: 2vw;
+    color: #AACA45;
 }
 
+.preloader {
+    background-color: #201A32;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.loader {
+    height: 160px;
+    width: 160px;
+    transition: all 0.5s;
+}
 
 
 .main-content {
@@ -59,14 +97,15 @@ body{
 
 .profile-header {
     display: grid;
-    grid-template-rows: 35% 65%;
-    height: 100vh;
 }
 
 .imagenes {
+    margin-top: 1%;
     background-color: #B69CFF;
     position: relative;
+
 }
+
 
 .Background-image {
     width: 100%;
@@ -97,8 +136,6 @@ body{
     object-fit: cover;
 }
 
-.profile-info {}
-
 .profile-info h1 {
     font-size: 24px;
     color: #AACA45;
@@ -117,7 +154,7 @@ body{
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px;
+    margin-bottom: 1%;
 }
 
 .follow-button:hover,
@@ -130,7 +167,7 @@ body{
 }
 
 .editprofile-button:hover {
-    background-color: #268FBE;
+    background-color: #B69CFF;
 }
 
 @media (max-width: 768px) {
@@ -249,7 +286,17 @@ h1 {
     background-color: transparent;
 }
 
+.logout {
+    border: 1px solid #AACA45;
+    color: white;
+    background-color: #AACA45;
+}
 
+.logout:hover {
+    border: 1px solid #B59CFE;
+    color: #B59CFE;
+    background-color: transparent;
+}
 
 #title-desc {
     font-size: 35px;
@@ -331,6 +378,12 @@ button {
     color: #fff;
     cursor: pointer;
     border-radius: 15px;
+
+}
+
+#btn:button {
+    background-color: #AACA45;
+
 }
 
 #title-aboutUs {
@@ -461,4 +514,41 @@ svg:hover {
 #subInput:hover {
     background-color: rgb(158, 158, 158);
 
+}
+
+.preloader {
+    background-color: #201A32;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.loader {
+    height: 160px;
+    width: 160px;
+    transition: all 0.5s;
+}
+
+.form-inline {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 20%;
+
+}
+
+
+.form-control {
+    color: #201A32;
+    /* Cambia el color del texto del input */
+    background-color: #201A32;
+    /* Cambia el color de fondo del input */
+    border: 1px solid #AACA45;
+    /* Cambia el color del borde del input */
 }

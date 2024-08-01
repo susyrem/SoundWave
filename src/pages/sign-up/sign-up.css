@@ -110,6 +110,7 @@ h1 {
 }
 
 .form__therms-group, 
+.form_privacy-group,
 .form__message,
 .form__group-send-btn {
 	grid-column: span 2;
@@ -167,6 +168,10 @@ h1 {
 }
 
 #group__therms a {
+	text-decoration: none;
+	color: #B59CFE;
+}
+#group__privacy a {
 	text-decoration: none;
 	color: #B59CFE;
 }
