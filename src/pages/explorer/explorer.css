@@ -51,6 +51,21 @@ body {
     transition: all 0.5s;
 }
 
+.form-inline {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align:center;
+    width: 20%;
+
+  }
+
+.form-control {
+    color:#201A32; /* Cambia el color del texto del input */
+    background-color: #201A32; /* Cambia el color de fondo del input */
+    border: 1px solid #AACA45; /* Cambia el color del borde del input */
+  }
+
 nav {
     background-color: #201A32;
     color: #AACA45;
@@ -224,7 +239,7 @@ svg:hover {
     border-radius: 1.5rem;
     border-color: #AACA45;
     border-style: solid;
-    background: #AACA45;
+    background:#AACA45;
     color: white;
     padding: .2rem .5rem;
 }
@@ -262,3 +277,23 @@ iframe {
     background-color: #B59CFE;
     border-radius: 7%;
 }
+.notify {
+    position: relative; /* Cambiado de absolute a relative para que el pseudoelemento se posicione correctamente */
+  }
+  
+  .notify::before {
+    content: attr(data-count);
+    position: relative;
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: 1px 9px;
+    background: linear-gradient(#ff1a1a, #ff0000, #e60000);
+    border-radius: 50%;
+    line-height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
+    opacity: 1; /* Asegura que el pseudoelemento sea visible */
+  }

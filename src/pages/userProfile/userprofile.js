@@ -1,7 +1,3 @@
-import { navmenuApp } from '/src/components/navmenu/navmenu-app.js';
-
-document.querySelector("#navmenu-app").innerHTML =  navmenuApp();
-
 
 const loader = document.querySelector(".preloader");
 
@@ -14,4 +10,3 @@ window.addEventListener("load", function(){
     }, 1300);
     
 });
-

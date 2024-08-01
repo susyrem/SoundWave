@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SoundWave</title>
+  <title>Explorer</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,71 +13,104 @@
   <link rel="stylesheet" href="./explorer.css">
 </head>
 
- <!-- Loader -->
+ <!-- preloader -->
 <body style="font-family: Fredoka;">
   <div class="preloader">
-    <img class="loader" src="/public/img/ezgif.com-animated-gif-maker.gif" alt="">
+    <img class="loader" src="./../../../public/img/ezgif.com-animated-gif-maker.gif" alt="">
   </div>
 
   <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a id="navbar-text-title" class="navbar-brand" href="/src/pages/explorer/explorer.html">
+        <a id="navbar-text-title" class="navbar-brand" href="/SoundWave/src/pages/feed/feed.html">
           <img src="./img/LogoColorTrans.png" alt="Logo" width="50" class="align-middle me-2" id="navbar-text">
           SoundWave
         </a>
     
         <!-- Search -->
-          <div class="justify-content-center">
-            <div class="input">
-              <div class="data-bs-ride">
-                <form class="d-flex" role="search" action="https://www.google.com/search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
+        <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <i id="menu-icon" class="fa-solid fa-bars"></i>
+    </button>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="btn" type="submit">Search</button>
+    </form>
+      <!-- Sidebar -->
+      <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel">
+        <!-- Sidebar Header -->
+        <div class="offcanvas-header text">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end text-center flex-grow-1 pe-3">
+            <li class="nav-item">
+                <div class="friends">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalNotification">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                          </svg>
+                      </button>
+                </div>
+        </li>
+
+        <li class="nav-item">
+          <div class="notify">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                      <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                    </svg>
+                </button>
           </div>
-        
-        <!-- Navigate -->
-        <div class="data-bs-target"></div>
-        <ul class="nav nav-pills nav-fill gap-2 p-1 small --bs-white shadow-sm" id="pillNav2" role="tablist"
-          style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-nav-pills-link-active-color); --bs-nav-pills-link-active-bg: var(--bs-white);">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab"
-              aria-selected="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-house-door" viewBox="0 0 16 16">
-                <path
-                  d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
-              </svg>
-            </button>
-          </li>
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+</header>
+          
+  <!-- Modal notificaciones-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Notificaciones</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="notifications">
+            <ul id="notificationList"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab"
-              aria-selected="false">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-person-circle" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                <path fill-rule="evenodd"
-                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-              </svg>
-            </button>
-          </li>
-
-          <li class="nav-item" role="presentation">
-            <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab"
-              aria-selected="false">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901">
-              </svg></button>
-          </li>
-
+  <!-- Modal friends-->
+  <div class="modal fade" id="exampleModalNotification" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Friends</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="notifications">
+            <ul id="notificationList"></ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            
 
           <!-- Sidebar -->
           <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar"
@@ -151,36 +184,36 @@
     <div class="container">
     <div class="card-group">
       <div class="card text-center">
-        <img src="/src/pages/explorer/img/corona_capital.webp" class="card-img-top" alt="...">
+        <img src="./img/corona_capital.webp" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Corona Capital</h5>
-          <p class="card-text">Ha logrado posicionarse como uno de los festivales más grande de México, su éxito
-            se ha consolidado por traer a grupos y artistas que no habían pisado tierras mexicanas.
+          <p class="card-text">It has managed to position itself as one of the largest festivals in Mexico, its success
+            It has been consolidated by bringing groups and artists that had not set foot on Mexican soil.
             <a target="_blank" href="http://www.coronacapital.com.mx/">
-              <h2 class="ver_mas center-block">VER MÁS</h2>
+              <h2 class="ver_mas center-block">SEE MORE</h2>
             </a>
           </p>
         </div>
       </div>
       <div class="card text-center">
-        <img src="/src/pages/explorer/img/festival.jpg" class="card-img-top" alt="...">
+        <img src="./img/festival.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Conciertos</h5>
-          <p class="card-text">Sus operaciones incluyen la contratación, producción y promoción de conciertos
-            musicales en vivo.
+          <h5 class="card-title">Concerts</h5>
+          <p class="card-text">Its operations include the booking, production and promotion of concerts
+            live musicals.
           <a target="_blank" href="https://www.cie.com.mx/mx/entretenimiento.php">
-            <h2 class="ver_mas center-block">VER MÁS</h2>
+            <h2 class="ver_mas center-block">SEE MORE</h2>
           </a>
           </p>
         </div>
       </div>
       <div class="card text-center">
-        <img src="/src/pages/explorer/img/eventoespecial.webp" class="card-img-top" alt="...">
+        <img src="./img/eventoespecial.webp" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Eventos Especiales</h5>
-          <p class="card-text">Producciones de eventos especiales para grandes marcas y compañías.
+          <h5 class="card-title">Special events</h5>
+          <p class="card-text">Productions of special events for big brands and companies.
           <a target="_blank" href="https://www.cie.com.mx/mx/eventosFamiliares.php">
-            <h2 class="ver_mas center-block">VER MÁS</h2>
+            <h2 class="ver_mas center-block">SEE MORE</h2>
           </a>
         </p>
         </div>
@@ -239,7 +272,7 @@
       <div class="col-md-4 col-sm-12 text-center mb-15 ">
         <br>
         <h2>SoundWave</h2>
-        <a id="nav-footer" href="">Inicio</a><br>
+        <a id="nav-footer" href="">Home</a><br>
         <a id="nav-footer" href="">About Us</a><br>
         <a id="nav-footer" href="./Contacto/contact.html">Contact</a><br>
         <a id="nav-footer" href="">Terms of Service</a><br>
@@ -303,7 +336,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <script type="module" src="/src/pages/explorer/explorer.js"></script>
+    <script type="module" src="./explorer.js"></script>
+    <script type="module" src="/SoundWave/src/pages/explorer/explorer.js"></script>
 </body>
 
 </html>

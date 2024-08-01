@@ -1,0 +1,92 @@
+/* Estilo para el body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(32, 26, 50, 0.945);
+}
+
+/* Fondo del perfil de edición */
+.editprofileFondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #201A32;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #B59CFE;
+}
+
+/* Estilo de contenedor */
+.form-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #201A32;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de elementos */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #AACA45;
+}
+
+input[type="file"],
+input[type="date"],
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #AACA45;
+    border-radius: 15px;
+    margin-bottom: 16px;
+    background-color: #201A32;
+    color: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estilo del botón */
+button,
+a.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #AACA45;
+    color: #201A32;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+a.button:hover {
+    background-color: #B59CFE;
+    color: white;
+}
+
+form > * {
+    margin-bottom: 16px;
+}
