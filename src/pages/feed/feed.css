@@ -1,3 +1,6 @@
+html {
+    scroll-snap-type: y mandatory;
+}
 #navbar-text {
     color: #AACA45;
     font-size: 18px;
@@ -69,6 +72,9 @@ main {
     margin-bottom: 15rem;
 }
 h1 {
+    color: #AACA45;
+}
+h2 {
     color: #AACA45;
 }
 
@@ -275,65 +281,42 @@ svg:hover {
     opacity: 1; /* Asegura que el pseudoelemento sea visible */
   }
 
-
-  /* Estilos para los modales */
-.modal-content {
-    background-color: #201A32;
-    border: 1px solid #AACA45;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.modal-header {
-    border-bottom: 1px solid #AACA45;
-}
-
-.modal-title {
-    color: #AACA45;
-    font-size: 20px;
-}
-
-.btn-close {
-    color: #AACA45;
-}
-
-.btn-close:hover {
+a{
+    color: #AACA45; 
+   
+    top: -20px;
+    right: -60px;
+    font-size: 18px;
     color: #B59CFE;
 }
-
-.modal-footer {
-    border-top: 1px solid #AACA45;
+.sidebarDerecha {
+    padding: 100px;
+    width: 65%;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+   
+    background-color: #211b32;
+   
 }
 
-.btn-secondary {
-    background-color: #AACA45;
-    color: white;
-    border: 1px solid #AACA45;
-}
+.sidebarIzquierda {
+    padding: 20px;
+    width: 20%;
+    background-color: #211B32;
+    border-radius: 5%;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    height:fit-content;
+    overflow: hidden;
 
-.btn-secondary:hover {
-    background-color: transparent;
-    color: #B59CFE;
-    border: 1px solid #B59CFE;
 }
-
-#notifications {
-    background-color: #201A32;
-    color: white;
-}
-
-#notificationList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#notificationList li {
-    padding: 10px;
-    border-bottom: 1px solid #AACA45;
-}
-
-#notificationList li:hover {
-    background-color: #AACA45;
-    color: #201A32;
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15rem;
 }
