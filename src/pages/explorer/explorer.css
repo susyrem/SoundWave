@@ -275,7 +275,9 @@ text-align: center;
 align-items: center;
 justify-content: center
 }
-
+footer {
+    margin: 40px;
+}
 
 
 .card {

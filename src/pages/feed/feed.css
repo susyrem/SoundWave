@@ -292,16 +292,15 @@ svg:hover {
    background-color: #211b32;
    border-radius: 2%;
    margin-right: 5%;
+   
 }
 .sidebarIzquierda {
     padding: 20px;
-    width: 55%;
+    width: 60%;
     background-color: #211B32;
     border-radius: 2%;
     margin-left: 10%;
     margin-right: 10%;
-   
-
 }
 .main-content {
     display: flex;
