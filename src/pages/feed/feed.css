@@ -231,17 +231,16 @@ svg:hover {
 
 #sharedPost {
     color: #AACA45; 
-    margin-top: 5rem
+    margin-top: 5rem;
 }
 #sharedPost div {
     color: white; 
     text-align: center;
 }
 #sharedPost button {
-    color: #ca4545;
+    color: #268FBE;
     background-color: transparent;
     border-style: none;
-
 }
 #sharedPost button:hover {
     color: #8c8c8c;
@@ -291,14 +290,14 @@ svg:hover {
     }
 .sidebarDerecha {
    background-color: #211b32;
-   border-radius: 5%;
-   margin-right: 10%;
+   border-radius: 2%;
+   margin-right: 5%;
 }
 .sidebarIzquierda {
-    padding: 30px;
-    width: 40%;
+    padding: 20px;
+    width: 55%;
     background-color: #211B32;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-left: 10%;
     margin-right: 10%;
    
@@ -311,6 +310,37 @@ svg:hover {
     padding: 20px;
     margin-bottom: 15rem;
 }
+
+#exampleModalLabel{
+    color: #211B32;
+}
+.card-body{
+    padding: 20px;
+    margin-bottom: 10px;   
+}
+.btnFriends {
+    background-color: #268FBE;
+}
+#btn-close {
+    background-color: #268FBE;
+}
+.modal-content {
+    background-color: #AACA45; /* Cambia esto al color de fondo que desees */
+    color: #211B32;
+}
+.modal-body {
+    padding: 15px; /* Espacio interior del modal-body */
+}
+#addfriends img {
+    margin: 25px; /* Espacio entre las imágenes y el borde */
+    max-width: 80%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+#spotifyURL{
+    background-color: #AACA45; 
+    font-size: 20px;
+    color: #211B32;
+    }
 /* Estilo del formulario para centrarlo */
 .form-inline {
     display: flex;
