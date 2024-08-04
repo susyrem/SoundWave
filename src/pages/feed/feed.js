@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             <p >${post.likes}</p>
         `;
 
+        // boton para likes
         botonLike.addEventListener("click",function(){
             let data = JSON.parse(localStorage.getItem('data')) || { posts: []};
             let postIndex = index;
