@@ -249,6 +249,7 @@ svg:hover {
 }
 
 
+
 /* esto es para spotify y las fficaciones */
 .spotify-player {
     margin-top: 10px;
@@ -262,28 +263,28 @@ svg:hover {
 
 .notify {
     position: relative; /* Cambiado de absolute a relative para que el pseudoelemento se posicione correctamente */
-  }
+    display: inline-block;
+}
   
-  .notify::before {
+.notify::before {
     content: attr(data-count);
-    position: relative;
-    top: -20px;
-    right: -60px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    padding: 1px 9px;
+    padding: 4px 9px;
     background: linear-gradient(#ff1a1a, #ff0000, #e60000);
     border-radius: 50%;
     line-height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
     opacity: 1; /* Asegura que el pseudoelemento sea visible */
-  }
+}
   a{
-    color: #AACA45; 
-    
-    top: -20px;
+    color: #AACA45;     
+    top: -10px;
     right: -60px;
     font-size: 18px;
     color: #e8e9ea;
@@ -383,4 +384,4 @@ svg:hover {
     .container {
         width: 100%;
     }
-}
+}}
