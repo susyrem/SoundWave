@@ -84,9 +84,14 @@ h2 {
         backdrop-filter: blur(20px);
     }
 }
+.profile-image {
+    height: 5%;
+    width: 25%;
+    border-radius: 50%;
+    border: 3px solid  #B59CFE;
+}
 
 .offcanvas {
-    
     color: #AACA45;
 }
 
@@ -296,13 +301,16 @@ svg:hover {
    
 }
 .sidebarIzquierda {
-    padding: 20px;
+    padding: 10px;
     width: 60%;
     background-color: #211B32;
     border-radius: 2%;
     margin-left: 10%;
     margin-right: 10%;
+
+  
 }
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -383,5 +391,7 @@ svg:hover {
     }
     .container {
         width: 100%;
+        margin-left: 250px;
     }
 }}
+
