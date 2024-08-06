@@ -540,16 +540,23 @@ svg:hover {
     width: 20%;
 
 }
-
-
-.form-control {
-    color: #201A32;
-    /* Cambia el color del texto del input */
-    background-color: #201A32;
-    /* Cambia el color de fondo del input */
-    border: 1px solid #AACA45;
-    /* Cambia el color del borde del input */
+.modal-content {
+    background-color: #AACA45; /* Cambia esto al color de fondo que desees */
+    color: #211B32;
 }
+.modal-body {
+    padding: 15px; /* Espacio interior del modal-body */
+}
+#addfriends img {
+    margin: 25px; /* Espacio entre las imágenes y el borde */
+    max-width: 80%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+#spotifyURL{
+    background-color: #AACA45; 
+    font-size: 20px;
+    color: #211B32;
+    }
 /* Estilo del formulario para centrarlo */
 .form-inline {
     display: flex;
@@ -592,5 +599,6 @@ svg:hover {
     }
     .container {
         width: 100%;
+        margin-left: 250px;
     }
-}
+}}

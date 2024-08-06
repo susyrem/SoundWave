@@ -40,11 +40,16 @@
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <i id="menu-icon" class="fa-solid fa-bars"></i>
             </button>
+ <!-- Barra busqueda -->
 
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" id="btn" type="submit">Search</button>
-            </form>
+ <form class="form-inline" id="search-form">
+    <input class="form-control mr-sm-2" id="search-input" type="search" placeholder="Search"
+        aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" id="btn" type="submit">Search</button>
+</form>
+
+<div id="search-results"></div>
+
 
             <!-- Sidebar -->
             <div class="sidebar offcanvas offcanvas-end text center" tabindex="-1" id="offcanvasNavbar"
@@ -69,12 +74,15 @@
                                 </button>
                             </div>
                         </li>
-                        <!-- Close -->
+                        <!-- Sign off-->
                         <li class="nav-item">
                             <div>
+                                <a href="./../../../index.html">
                                 <button class="logout" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Sign off
+                               
                                 </button>
+                            </a>
                             </div>
                         </li>
                     </ul>
@@ -90,7 +98,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Notificaciones</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Notifications</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="notifications">
@@ -102,44 +110,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal friends-->
-    <!--<div class="modal fade" id="exampleModalNotification" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Friends</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div id="addfriends">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>>>
-
-    <!-Logout-->
-    <div class="modal fade" id="logout" tabindex="-1" aria-labelledby="closeProfileModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">CLOSE</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div id="closeProfile">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <main>
         <div class="content">
@@ -167,9 +137,12 @@
                     width="100%" height="352" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
-                <button id="connect-spotify">Add more songs</button>
+                <a target="_blank" href="https://open.spotify.com/intl-es">
+                    <button id="connect-spotify">Add more songs </button>
                 <ul id="spotify-playlist-items"></ul>
+            </a>
             </div>
+
             <div class="sidebarDerecha">
                 <!--User Profile-->
                 <div class="profile-header">
@@ -196,11 +169,11 @@
                                 Profile</button>
 
                             <!-- Posts -->
-                            <h1 class="title-desc text-center mb-5">-----</h1>
+                            <h1 class="title-desc text-center mb-5">🎵</h1>
                             <div id="post-form" class="container text-center justify-content-center">
                                 <form name="form1" id="postingform" class="contact-form">
                                     <div class="row justify-content-center text-start">
-                                        <input class="" type="text" id="name" placeholder="@malena_ortíz" required>
+                                        <input class="" type="text" id="name" placeholder="@malena_wood" required>
                                     </div>
                                     <div class="row justify-content-center text-start">
                                         <textarea id="message" rows="4"
