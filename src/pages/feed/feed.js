@@ -55,8 +55,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cardBody1.className = "card-body d-flex flex-row";
 
         // imagen avatar post
-        const imgAvatar = document.getElementById("img");
+        const imgAvatar = document.createElement("img");
         imgAvatar.src = "./../../../public/img/profile4.jpg";
+        
         imgAvatar.className = "rounded-circle me-3";
         imgAvatar.setAttribute("height", "50");
         imgAvatar.setAttribute("width", "50");
