@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             spotifyUrl:spotifyUrl || '',
             notification: `${name} ha compartido una publicación`, // Usar la variable `name`
             fecha: new Date().toLocaleString(),
-            imagen: "https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg",
+            imagen: src = "./../../../public/img/soundwavepub.jpg",
             likes:0,
             comments:[]
         };

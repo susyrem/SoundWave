@@ -266,20 +266,14 @@ iframe {
     text-align: center;
     align-items: center;
     justify-content: center;
-    
 }
 .carousel-inner>.carousel-item>a>img {
-width: 250px;
-height: 650px;
-text-align: center;
-align-items: center;
-justify-content: center
+    width: 100px;
+    object-fit: cover;
 }
 footer {
-    margin: 40px;
+    margin: 60px;
 }
-
-
 .card {
     background-color: #B59CFE;
     border-radius: 7%;
