@@ -84,9 +84,14 @@ h2 {
         backdrop-filter: blur(20px);
     }
 }
+.profile-image {
+    height: 5%;
+    width: 25%;
+    border-radius: 50%;
+    border: 3px solid #268fbe;
+}
 
 .offcanvas {
-    
     color: #AACA45;
 }
 
@@ -185,14 +190,15 @@ svg{
     overflow: hidden;
 }
 svg:hover {
-    color: #B59CFE;
-}
-.bi {
-    color: #AACA45;
-}
-.bi:hover {
-    color: #B59CFE;
-}
+    color: #e8e9ea;
+    }
+    .bi {
+    color: #268fbe;
+    }
+    .bi:hover {
+    color: #e8e9ea;
+    }
+
 #sub {
     margin-right: 6rem;
 }
@@ -227,28 +233,25 @@ svg:hover {
     background-color: rgb(158, 158, 158);
 
 }
-
+/* post */
 #sharedPost {
     color: #AACA45; 
-    margin-top: 5rem
+    margin-top: 5rem;
 }
 #sharedPost div {
     color: white; 
     text-align: center;
 }
 #sharedPost button {
-    color: #ca4545;
+    color: #268FBE;
     background-color: transparent;
     border-style: none;
-
 }
 #sharedPost button:hover {
     color: #8c8c8c;
     background-color: transparent;
     border-style: none;
 }
-
-
 /* esto es para spotify y las fficaciones */
 .spotify-player {
     margin-top: 10px;
@@ -262,47 +265,45 @@ svg:hover {
 
 .notify {
     position: relative; /* Cambiado de absolute a relative para que el pseudoelemento se posicione correctamente */
-  }
+    display: inline-block;
+}
   
-  .notify::before {
+.notify::before {
     content: attr(data-count);
-    position: relative;
-    top: -20px;
-    right: -60px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
-    padding: 1px 9px;
+    padding: 4px 9px;
     background: linear-gradient(#ff1a1a, #ff0000, #e60000);
     border-radius: 50%;
     line-height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
     opacity: 1; /* Asegura que el pseudoelemento sea visible */
-  }
-
-a{
-    color: #AACA45; 
-   
-    top: -20px;
+}
+  a{
+    color: #AACA45;     
+    top: -10px;
     right: -60px;
     font-size: 18px;
-    color: #B59CFE;
-}
+    color: #e8e9ea;
+    }
 .sidebarDerecha {
    background-color: #211b32;
-   border-radius: 5%;
-   margin-right: 10%;
+   border-radius: 2%;
+   margin-right: 5%;
+   padding: 50px;
 }
 .sidebarIzquierda {
-    padding: 30px;
-    width: 40%;
+    padding: 10px;
+    width: 60%;
     background-color: #211B32;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-left: 10%;
     margin-right: 10%;
-   
-
 }
 .main-content {
     display: flex;
@@ -311,3 +312,79 @@ a{
     padding: 20px;
     margin-bottom: 15rem;
 }
+#exampleModalLabel{
+    color: #211B32;
+}
+.card-body{
+    padding: 20px;
+    margin-bottom: 10px;   
+}
+.btnFriends {
+    background-color: #268FBE;
+}
+#btn-close {
+    background-color: #268FBE;
+}
+.modal-content {
+    background-color: #AACA45; /* Cambia esto al color de fondo que desees */
+    color: #211B32;
+}
+.modal-body {
+    padding: 15px; /* Espacio interior del modal-body */
+}
+#addfriends img {
+    margin: 25px; /* Espacio entre las imágenes y el borde */
+    max-width: 80%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+#spotifyURL{
+    background-color: #AACA45; 
+    font-size: 20px;
+    color: #211B32;
+    }
+/* Estilo del formulario para centrarlo */
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Estilo de la barra de búsqueda */
+.form-control {
+    width: 250px; /* Ajusta el ancho de la barra de búsqueda */
+    padding: 8px 12px; /* Ajusta el padding para hacerla más delgada */
+    border-radius: 20px; /* Redondea los bordes */
+    border: 1px solid #AACA45;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 8px; /* Espacio entre la barra de búsqueda y el botón */
+}
+/* Estilo del botón */
+.btn-outline-success {
+    border-radius: 20px; /* Redondea los bordes del botón */
+}
+/* Estilo adicional para el foco */
+.form-control:focus {
+@media (max-width: 768px) {
+    .title-desc {
+        font-size: 1.5em;
+    }
+    .container {
+        width: 95%;
+    }
+    ul.list {
+        padding-left: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .title-desc {
+        font-size: 1.2em;
+    }
+    figcaption.blockquote-footer {
+        font-size: 0.7em;
+    }
+    .container {
+        width: 100%;
+        margin-left: 250px;
+    }
+}}
+

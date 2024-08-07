@@ -267,33 +267,64 @@ iframe {
     align-items: center;
     justify-content: center;
 }
-
 .carousel-inner>.carousel-item>a>img {
-    width: 250px;
-    height: 650px;
+    width: 100px;
+    object-fit: cover;
 }
-
+footer {
+    margin: 60px;
+}
 .card {
     background-color: #B59CFE;
     border-radius: 7%;
 }
-.notify {
-    position: relative; /* Cambiado de absolute a relative para que el pseudoelemento se posicione correctamente */
-  }
-  
-  .notify::before {
-    content: attr(data-count);
-    position: relative;
-    top: -20px;
-    right: -60px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    padding: 1px 9px;
-    background: linear-gradient(#ff1a1a, #ff0000, #e60000);
-    border-radius: 50%;
-    line-height: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    transition: opacity 0.1s ease-out; /* Corregido a 'opacity' */
-    opacity: 1; /* Asegura que el pseudoelemento sea visible */
-  }
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Estilo del formulario para centrarlo */
+.form-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* Estilo de la barra de búsqueda */
+.form-control {
+    width: 250px; /* Ajusta el ancho de la barra de búsqueda */
+    padding: 8px 12px; /* Ajusta el padding para hacerla más delgada */
+    border-radius: 20px; /* Redondea los bordes */
+    border: 1px solid #AACA45;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-right: 8px; /* Espacio entre la barra de búsqueda y el botón */
+}
+/* Estilo del botón */
+.btn-outline-success {
+    border-radius: 20px; /* Redondea los bordes del botón */
+}
+/* Estilo adicional para el foco */
+.form-control:focus 
+@media (max-width: 768px) {
+    .title-desc {
+        font-size: 1.5em;
+    }
+    .container {
+        width: 95%;
+    }
+    ul.list {
+        padding-left: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .title-desc {
+        font-size: 1.2em;
+    }
+    figcaption.blockquote-footer {
+        font-size: 0.7em;
+    }
+    .container {
+        width: 100%;
+    }
+}

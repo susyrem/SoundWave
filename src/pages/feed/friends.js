@@ -12,7 +12,7 @@ const cargarDatos= async()=>{
                 <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">${user.first_name} ${user.last_name}</h5>
-                    <p class="card-text">Me gustaria ser tu amig@.</p>
+                    <p class="card-text">I would like to be your friend.</p>
                     <a href="#" class="btn btn-primary btnFriends" data-friend="false">Accept</a>
                     <span class="friendStatus d-none">Amigo</span>
                 </div>

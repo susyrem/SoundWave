@@ -54,8 +54,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const cardBody1 = document.createElement("div");
         cardBody1.className = "card-body d-flex flex-row";
 
+        // imagen avatar post
         const imgAvatar = document.createElement("img");
-        imgAvatar.src = "https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg";
+        imgAvatar.src = "./../../../public/img/profile4.jpg";
+        
         imgAvatar.className = "rounded-circle me-3";
         imgAvatar.setAttribute("height", "50");
         imgAvatar.setAttribute("width", "50");
@@ -113,7 +115,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
 
         
+        const comentFlex=document.createElement('div');
+        comentFlex.classList.add('input-group' ,'mb-3');
+        const buttonComents=document.createElement('button');
+        buttonComents.classList.add('btn', 'btn-outline-secondary');
+        buttonComents.type="button";
+        buttonComents.id='btnComments';
+        buttonComents.textContent='Comment';
+    
 
+        // para el boton borrar 
         const divFlex = document.createElement('div');
         divFlex.className = 'd-flex justify-content-end align-items-center';
 
@@ -124,6 +135,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
             </svg>
         `;
+
+        const botonLike = document.createElement("button");
+        botonLike.className = "btn-like btn btn-danger me-2";
+        botonLike.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+            </svg>
+            <p >${post.likes}</p>
+        `;
+
+        // boton para likes
+        botonLike.addEventListener("click",function(){
+            let data = JSON.parse(localStorage.getItem('data')) || { posts: []};
+            let postIndex = index;
+            let post = data.posts[postIndex];
+            post.likes += 1;
+            data.posts[postIndex] = post;
+            localStorage.setItem('data', JSON.stringify(data));
+            location.reload(); 
+
+        })
+
         botonBorrar.addEventListener("click", function () {
             // Obtener el índice del post desde el dataset
             const index = parseInt(elementPost.dataset.index);
@@ -144,12 +177,56 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     }
                 });
 
+        divFlex.appendChild(botonLike);
         divFlex.appendChild(botonBorrar);
         cardBody2.appendChild(divFlex);
         cardDiv.appendChild(cardBody2);
         colDiv.appendChild(cardDiv);
         rowDiv.appendChild(colDiv);
+        
+        //para los comentarios
+        const inputElement = document.createElement('input');
+        inputElement.type = 'text';  
+        inputElement.classList.add('form-control');
+        inputElement.placeholder=("");
+        inputElement.name='commentPost';
+        inputElement.id='commentPost';
+        inputElement.placeholder = 'Enter your comment'; 
+        comentFlex.appendChild(buttonComents);
+        comentFlex.appendChild(inputElement);
+        cardBody2.appendChild(comentFlex); 
+
+        const comments = document.createElement('div');
+        comments.id="commentsList";
+        const ol = document.createElement('ol');
+        ol.classList.add("list-group-numbered");
+        post.comments.forEach(comment => {
+            const li = document.createElement('li');
+            li.classList.add("list-group-item", "text-content-center");
+            li.textContent = comment; // Asigna el comentario al contenido de `li`
+            ol.appendChild(li); // Agrega `li` a `ol`
+        });
+
+
+        buttonComents.addEventListener("click", function () {
+            const input=inputElement.value;
+            addComment(index, input);
+            inputElement.value = ""; 
+            location.reload(); 
+        });
+
+        
+        comments.appendChild(ol); // Agrega `li` a `comments`
+        cardBody2.appendChild(comments); // Luego agrega `comments` a `cardBody2`
+
+
         elementPost.appendChild(rowDiv);
+
+
+
+
+
+
         lista.prepend(elementPost);
     };
 
@@ -167,7 +244,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
             spotifyUrl:spotifyUrl || '',
             notification: `${name} ha compartido una publicación`, // Usar la variable `name`
             fecha: new Date().toLocaleString(),
-            imagen: "https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg"
+            imagen: "./../../../public/img/soundwavepub.jpg",
+            likes:0,
+            comments:[]
         };
 
         let data = JSON.parse(localStorage.getItem('data')) || { posts: [], notifications: [] };
@@ -208,4 +287,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
         formulario.reset();
     });
 
+    function addComment(postIndex, comment) {
+        // Recuperar datos desde localStorage
+        const data = JSON.parse(localStorage.getItem('data')) || { posts: [] };
+    
+        // Verificar que `data` y `data.posts` existan y sean arrays
+        if (Array.isArray(data.posts) && data.posts[postIndex]) {
+            // Asegúrate de que el `postIndex` sea un índice válido
+            if (postIndex >= 0 && postIndex < data.posts.length) {
+                // Acceder al post específico
+                const post = data.posts[postIndex];
+                
+                // Asegúrate de que `post.comments` sea un array
+                if (!Array.isArray(post.comments)) {
+                    post.comments = [];
+                }
+                
+                // Añadir el comentario al post
+                post.comments.push(comment);
+                
+                // Guardar los datos actualizados en localStorage
+                localStorage.setItem('data', JSON.stringify(data));
+            } else {
+                console.error('Índice de post inválido');
+            }
+        } else {
+            console.error('Datos inválidos o post no encontrado');
+        }
+    }
+
+    
 });
