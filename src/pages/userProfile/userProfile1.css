@@ -621,39 +621,42 @@ svg:hover {
 
 /* Estilo de la barra de búsqueda */
 .form-control {
-    width: 250px;
-    /* Ajusta el ancho de la barra de búsqueda */
-    padding: 8px 12px;
-    /* Ajusta el padding para hacerla más delgada */
-    border-radius: 20px;
-    /* Redondea los bordes */
+    width: 250px; /* Ajusta el ancho de la barra de búsqueda */
+    padding: 8px 12px; /* Ajusta el padding para hacerla más delgada */
+    border-radius: 20px; /* Redondea los bordes */
     border: 1px solid #AACA45;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-right: 8px;
-    /* Espacio entre la barra de búsqueda y el botón */
+    margin-right: 8px; /* Espacio entre la barra de búsqueda y el botón */
 }
-
 /* Estilo del botón */
 .btn-outline-success {
-    border-radius: 20px;
-    /* Redondea los bordes del botón */
+    border-radius: 20px; /* Redondea los bordes del botón */
 }
-
 /* Estilo adicional para el foco */
 .form-control:focus {
-    @media (max-width: 768px) {
-        .title-desc {
-            font-size: 1.5em;
-        }
-
-        .container {
-            width: 95%;
-        }
-
-        ul.list {
-            padding-left: 15px;
-        }
+@media (max-width: 768px) {
+    .title-desc {
+        font-size: 1.5em;
     }
+    .container {
+        width: 95%;
+    }
+    ul.list {
+        padding-left: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .title-desc {
+        font-size: 1.2em;
+    }
+    figcaption.blockquote-footer {
+        font-size: 0.7em;
+    }
+    .container {
+        width: 100%;
+        margin-left: 250px;
+    }
+}}
 <<<<<<< HEAD
 
     @media (max-width: 480px) {
@@ -676,7 +679,7 @@ svg:hover {
     ul.list {
         padding-left: 15px;
     }
-}
+
 @media (max-width: 480px) {
     .title-desc {
         font-size: 1.2em;
@@ -688,5 +691,5 @@ svg:hover {
         width: 100%;
         margin-left: 250px;
     }
-}}
+}
 >>>>>>> 01bab66f2a1066d79505c54217efcdc358ccbc98
