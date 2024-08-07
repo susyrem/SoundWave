@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             spotifyUrl:spotifyUrl || '',
             notification: `${name} ha compartido una publicación`, // Usar la variable `name`
             fecha: new Date().toLocaleString(),
-            imagen: src = "./../../../public/img/soundwavepub.jpg",
+            imagen: "./../../../public/img/soundwavepub.jpg",
             likes:0,
             comments:[]
         };
