@@ -267,6 +267,9 @@ main {}
 h1 {
     color: #AACA45;
 }
+h4 {
+   color: #B69CFF;
+}
 
 @media (max-width: 991px) {
     .sidebar {
