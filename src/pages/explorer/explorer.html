@@ -49,7 +49,7 @@
       </div>
 
     
-</ul>
+
 </div>
 </div>
 </div>
@@ -168,44 +168,47 @@
 
     <!--Spotify-->
     <section class="container mt-4 justify-content-center">
-      <h1 class="title-desc text-center mb-5">Top Spotify</h1>
-      <div class="container">
+   
+      <div class="content">
+        <div class="sidebarIzquierda"></div>
+           <h1 class="title-desc text-center mb-5">Top Spotify</h1>
         <div class="row">
-      <div class="embed-responsive embed-responsive-16by9">
-    <iframe style="border-radius:12px"
+          <div class="carruselInterno">
+
+    <iframe class="carruselItem" style="border-radius:12px"
       src="https://open.spotify.com/embed/album/6XY5UnmRdYiUuuO4cWoArO?utm_source=generator" width="40%" height="352"
       frameBorder="0" allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <iframe style="border-radius:12px"
+    <iframe class="carruselItem" style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/0NsJ2uXtwnS5tGDY8dvXvW?utm_source=generator" width="40%" height="352"
       frameBorder="0" allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <iframe style="border-radius:12px"
+    <iframe class="carruselItem" style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9KJJbsGEwfj?utm_source=generator" width="40%" height="352"
       frameBorder="0" allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 
-    <iframe style="border-radius:12px"
+    <iframe class="carruselItem" style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/4GYEN4ZTL60fZIWyVw0uRC?utm_source=generator" width="40%" height="352"
       frameBorder="0" allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <iframe style="border-radius:12px"
+    <iframe class="carruselItem" style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/37i9dQZF1DX21ow0o1PZDE?utm_source=generator" width="40%" height="352"
       frameBorder="0" allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <iframe style="border-radius:12px"
+    <iframe class="carruselItem" style="border-radius:12px"
       src="https://open.spotify.com/embed/playlist/37i9dQZF1DWZYhzr1oCcXQ?utm_source=generator" width="40%" height="352"
       frameBorder="0" allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
     </div>
-  </div>
-
+    </div>
+    
     </section>
     <footer>
       <div class="footer">
@@ -217,6 +220,7 @@
       crossorigin="anonymous"></script>
       <script type="module" src="/src/pages/explorer/search.js"></script>
     <script type="module" src="./explorer.js"></script>
+    <script type="module" src="./carruselExplorer.js"></script>
     <script type="module" src="./search.js"></script>
     <script type="module" src="/SoundWave/src/pages/explorer/explorer.js"></script>
 </body>

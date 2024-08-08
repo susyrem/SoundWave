@@ -1,4 +1,4 @@
-function updateProfile() {
+function updateProfile() 
     // Obtén los valores de los campos del formulario
     const profilePic = document.getElementById('profile-pic').files[0];
     const name = document.getElementById('name').value;

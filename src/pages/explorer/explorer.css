@@ -268,8 +268,9 @@ iframe {
     justify-content: center;
 }
 .carousel-inner>.carousel-item>a>img {
-    width: 100px;
-    object-fit: cover;
+    width: 1000px;
+    object-fit: contain; /* Asegura que la imagen se ajuste bien al contenedor */
+    height: 1000px; /* Ajusta la altura a tu preferencia */
 }
 footer {
     margin: 60px;
@@ -305,18 +306,14 @@ footer {
     border-radius: 20px; /* Redondea los bordes del botón */
 }
 /* Estilo adicional para el foco */
-.form-control:focus 
-@media (max-width: 768px) {
-    .title-desc {
-        font-size: 1.5em;
-    }
+  
     .container {
         width: 95%;
     }
     ul.list {
         padding-left: 15px;
     }
-}
+
 @media (max-width: 480px) {
     .title-desc {
         font-size: 1.2em;
@@ -328,3 +325,33 @@ footer {
         width: 100%;
     }
 }
+
+.sidebarIzquierda,
+.sidebarDerecha {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .carruselInterno {
+        flex-direction: row;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-Item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+
+        margin-right: 10%;
+        flex: 0 0 100%;
+
+        
+        align-items: center;
+    }
+}
+        
