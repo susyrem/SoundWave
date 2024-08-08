@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Función para renderizar un post en la interfaz
     const renderizarPost = (post, index) => {
+        
         // Crear elementos HTML para el post
         const elementPost = document.createElement("div");
         elementPost.className = "container mt-5 d-flex justify-content-center post-item";
