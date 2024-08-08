@@ -54,8 +54,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const cardBody1 = document.createElement("div");
         cardBody1.className = "card-body d-flex flex-row";
 
+        // imagen avatar post
         const imgAvatar = document.createElement("img");
-        imgAvatar.src = "https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg";
+        imgAvatar.src = "./../../../public/img/profile4.jpg";
+        
         imgAvatar.className = "rounded-circle me-3";
         imgAvatar.setAttribute("height", "50");
         imgAvatar.setAttribute("width", "50");
@@ -242,7 +244,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             spotifyUrl:spotifyUrl || '',
             notification: `${name} ha compartido una publicación`, // Usar la variable `name`
             fecha: new Date().toLocaleString(),
-            imagen: "https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg",
+            imagen: "./../../../public/img/soundwavepub.jpg",
             likes:0,
             comments:[]
         };
@@ -314,4 +316,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
+    
 });

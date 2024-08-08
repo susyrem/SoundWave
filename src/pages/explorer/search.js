@@ -1,16 +1,3 @@
-
-const loader = document.querySelector(".preloader");
-
-window.addEventListener("load", function(){
-    setTimeout(() => {
-        loader.style.opacity = "0";
-    }, 1000);
-    setTimeout(() => {
-        loader.style.display = "none";
-    }, 1300);
-    
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
@@ -35,5 +22,3 @@ document.addEventListener('DOMContentLoaded', function() {
         searchResultsDiv.innerHTML = results || '<p>No se encontraron resultados.</p>';
     });
 });
-
-

@@ -84,9 +84,14 @@ h2 {
         backdrop-filter: blur(20px);
     }
 }
+.profile-image {
+    height: 5%;
+    width: 25%;
+    border-radius: 50%;
+    border: 3px solid #268fbe;
+}
 
 .offcanvas {
-    
     color: #AACA45;
 }
 
@@ -243,7 +248,7 @@ svg:hover {
     background-color: rgb(158, 158, 158);
 
 }
-
+/* post */
 #sharedPost {
     color: #AACA45; 
     margin-top: 5rem;
@@ -262,9 +267,6 @@ svg:hover {
     background-color: transparent;
     border-style: none;
 }
-
-
-
 /* esto es para spotify y las fficaciones */
 .spotify-player {
     margin-top: 10px;
@@ -308,10 +310,10 @@ svg:hover {
    background-color: #211b32;
    border-radius: 2%;
    margin-right: 5%;
-   
+   padding: 50px;
 }
 .sidebarIzquierda {
-    padding: 20px;
+    padding: 10px;
     width: 60%;
     background-color: #211B32;
     border-radius: 2%;
@@ -325,7 +327,6 @@ svg:hover {
     padding: 20px;
     margin-bottom: 15rem;
 }
-
 #exampleModalLabel{
     color: #211B32;
 }
@@ -395,5 +396,7 @@ svg:hover {
     }
     .container {
         width: 100%;
+        margin-left: 250px;
     }
 }}
+
