@@ -151,11 +151,26 @@ h2 {
 }
 
 
-.card {
+.card,.card-body,.bg-image {
     background-color: rgb(32, 26, 50);
     color: white;
-    height: 40rem;
-    width: 22rem;
+    height: auto; 
+    width: 1500%;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .card,.card-body,.bg-image {
+        width: 280%; /* Hacer la tarjeta un poco más estrecha en pantallas pequeñas */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .card,.card-body,.bg-image{
+        width: 100%; /* Hacer la tarjeta ocupar el 100% del contenedor padre */
+        
+    }
 }
 .icons:hover {
     color:#B59CFE
@@ -314,10 +329,7 @@ svg:hover {
 #exampleModalLabel{
     color: #211B32;
 }
-.card-body{
-    padding: 20px;
-    margin-bottom: 10px;   
-}
+
 .btnFriends {
     background-color: #268FBE;
 }
