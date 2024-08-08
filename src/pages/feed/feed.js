@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             
             const iframe = document.createElement('iframe');
             iframe.src = `https://open.spotify.com/embed/track/${getSpotifyTrackId(post.spotifyUrl)}`;
-            iframe.width = "300";
+            iframe.width = "100%";
             iframe.height = "80";
             iframe.frameBorder = "0";
             iframe.allow = "encrypted-media";
