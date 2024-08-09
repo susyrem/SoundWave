@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./userProfile1.css">
+    
 </head>
 
 <body style="font-family: Fredoka;" class="fondo">
@@ -77,9 +78,12 @@
                             <!-- Close -->
                             <li class="nav-item">
                                 <div>
-                                    <button class="logout" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                   <a href="./../../../index.html">
+                                    <button class="logout" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                                         Sign off
+                                    
                                     </button>
+                                </a>
                                 </div>
                             </li>
                         </ul>
@@ -207,7 +211,18 @@
                             </p>
                         </section>
                         <section>
-                            <button class="follow-button"> + Add</button>
+                         <!-- boton +add-->
+                            <button id="add-button">+add</button>
+                            <div id="friends-list"></div>
+                        
+                            <!-- Modal -->
+                            <div id="suggestions-modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div id="suggestions"></div>
+                                </div>
+                            </div>
+                        <!-- boton edit profile-->
                             <button class="editprofile-button" onclick="location.href='./editprofile.html'">Edit
                                 Profile</button>
 
@@ -259,6 +274,7 @@
     <script src="userprofile1.js"></script>
     <script type="module" src="/loader.js"></script>
     <script src="/src/pages/feed/friends.js"></script>
+    <script src="/src/pages/userProfile/add.+.js"></script>
     <script src="/src/pages/feed/feed.js"></script>
     <script src="addfriend.js"></script>
     <script src="carrusel.js"></script>

@@ -263,15 +263,19 @@ iframe {
 
 .carouselExample {
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
+    
 }
 .carousel-inner>.carousel-item>a>img {
-    width: 1000px;
-    object-fit: contain; /* Asegura que la imagen se ajuste bien al contenedor */
-    height: 1000px; /* Ajusta la altura a tu preferencia */
+    max-width: 500%;
+    max-height: 500px; /* Ajusta la altura a tu preferencia */
+    margin: 0 auto;
+    object-fit:contain; /* Cubre el espacio disponible sin distorsionar la imagen */
+    
 }
+    
+
 footer {
     margin: 60px;
 }

@@ -164,6 +164,13 @@ h2 {
     max-width: 600px;
 }
 
+.card {
+    background-color: rgb(32, 26, 50);
+    color: white;
+    height: 35rem;
+}
+
+
 @media (max-width: 768px) {
     .card,.card-body,.bg-image {
         width: 280%; /* Hacer la tarjeta un poco más estrecha en pantallas pequeñas */
