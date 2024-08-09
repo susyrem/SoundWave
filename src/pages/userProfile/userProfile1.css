@@ -39,6 +39,7 @@ body {
 .sidebarIzquierda {
     padding: 20px;
     flex: 0 0 30%;
+    height: fit-content;
     background-color: #211B32;
     border-radius: 2%;
     margin-top: 3%;
@@ -50,11 +51,12 @@ body {
 .sidebarDerecha {
     padding: 20px;
     flex: 1;
+    height: fit-content;
     border-radius: 2%;
     margin-top: 2%;
     margin-left: 3%;
     margin-right: 3%;
-    margin-bottom: none;
+    margin-bottom: 2%;
     background-color: #211b32;
 }
 
@@ -140,11 +142,11 @@ body {
 
 .profile-header {
     display: grid;
-    grid-template-rows: 35% 65%;
-    height: 100vh;
+    height: auto;
 }
 
 .imagenes {
+    height: 32vh;
     margin-top: 1%;
     background-color: #B69CFF;
     position: relative;
@@ -568,13 +570,13 @@ button {
 #sharedPost button:hover {
     color: #8c8c8c;
     background-color: transparent;
-    border-style: none;
+    border-style: none;
 }
 
 
 /* Estilo general para el contenedor de comentarios */
 #sharedPost {
-    max-width: 100%;
+    width: 100%;
     overflow-wrap: break-word;
     overflow: auto;
     padding: 10px;
@@ -589,9 +591,6 @@ button {
   border-radius: 4px;
 }
 
-
-
-/*Estilo para que no se encimen
 #sharedPost {
     color: #AACA45;
     margin-top: 5rem;
@@ -620,5 +619,5 @@ button {
 }
 
 .bi:hover {
-    color: #e8e9ea;
+    color: #e8e9ea;
 }
