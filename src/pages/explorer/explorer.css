@@ -263,23 +263,22 @@ iframe {
 
 .carouselExample {
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
     
 }
 .carousel-inner>.carousel-item>a>img {
-width: 250px;
-height: 650px;
-text-align: center;
-align-items: center;
-justify-content: center
+    max-width: 500%;
+    max-height: 500px; /* Ajusta la altura a tu preferencia */
+    margin: 0 auto;
+    object-fit:contain; /* Cubre el espacio disponible sin distorsionar la imagen */
+    
 }
+    
+
 footer {
-    margin: 40px;
+    margin: 60px;
 }
-
-
 .card {
     background-color: #B59CFE;
     border-radius: 7%;
@@ -311,18 +310,14 @@ footer {
     border-radius: 20px; /* Redondea los bordes del botón */
 }
 /* Estilo adicional para el foco */
-.form-control:focus 
-@media (max-width: 768px) {
-    .title-desc {
-        font-size: 1.5em;
-    }
+  
     .container {
         width: 95%;
     }
     ul.list {
         padding-left: 15px;
     }
-}
+
 @media (max-width: 480px) {
     .title-desc {
         font-size: 1.2em;
@@ -376,3 +371,33 @@ footer {
         backdrop-filter: blur(20px);
     }
 }
+
+.sidebarIzquierda,
+.sidebarDerecha {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .carruselInterno {
+        flex-direction: row;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-Item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+
+        margin-right: 10%;
+        flex: 0 0 100%;
+
+        
+        align-items: center;
+    }
+}
+        

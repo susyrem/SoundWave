@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Función para renderizar un post en la interfaz
     const renderizarPost = (post, index) => {
+        
         // Crear elementos HTML para el post
         const elementPost = document.createElement("div");
         elementPost.className = "container mt-5 d-flex justify-content-center post-item";
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             
             const iframe = document.createElement('iframe');
             iframe.src = `https://open.spotify.com/embed/track/${getSpotifyTrackId(post.spotifyUrl)}`;
-            iframe.width = "300";
+            iframe.width = "100%";
             iframe.height = "80";
             iframe.frameBorder = "0";
             iframe.allow = "encrypted-media";
@@ -244,7 +245,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             spotifyUrl:spotifyUrl || '',
             notification: `${name} ha compartido una publicación`, // Usar la variable `name`
             fecha: new Date().toLocaleString(),
-            imagen: "https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg",
+            imagen: "./../../../public/img/soundwavepub.jpg",
             likes:0,
             comments:[]
         };

@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./userProfile1.css">
+    
 </head>
 
 <body style="font-family: Fredoka;" class="fondo">
@@ -79,9 +80,12 @@
                             <!-- Close -->
                             <li class="nav-item">
                                 <div>
-                                    <button class="logout" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                   <a href="./../../../index.html">
+                                    <button class="logout" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                                         Sign off
+                                    
                                     </button>
+                                </a>
                                 </div>
                             </li>
                         </ul>
@@ -185,8 +189,9 @@
                         loading="lazy"></iframe>
 
                 </div>
+                <a target="_blank" href="https://open.spotify.com/intl-es">
                 <button id="connect-spotify">Add more songs</button>
-                <ul id="spotify-playlist-items"></ul>
+                <ul id="spotify-playlist-items"></ul></a>
             </div>
             <div class="sidebarDerecha">
                 <!--User Profile-->
@@ -195,38 +200,38 @@
                         <img src="wallpaper-soundwave1.jpg" alt="Background Image" id="Background-image"
                             class="Background-image">
                         <div class="fotoDePerfil">
-                            <img src="FOTO PERFIL.jpg" alt="Profile Image" id="profile-image" <img
-                                src="./../../../public/img/profile4.jpg" alt="Profile Image" id="profile-image"
+                            <img src="./../../../public/img/profile4.jpg" alt="Profile Image" id="profile-image"
+                           src="./../../../public/img/profile4.jpg" alt="Profile Image" id="profile-image"
                                 class="profile-image">
                         </div>
                     </div>
                     <div class="profile-info">
                         <section>
                             <h2> </h2>
-                            <h1 id="profile-name">Malena Ortíz </h1>
-                            <h4 id="profile-user">@malena_ortiz</h4>
+                            <h1 id="profile-name">Malena Taylor Wood </h1> <h4 id="profile-user">@malena_wood</h4>
                         </section>
                         <section>
-                            <p id="profile-description">¡Hola! Soy Malena Ortíz, una apasionada de
-                                la música. Me encanta explorar nuevos géneros y descubrir artistas
-                                emergentes. Mi estilo musical es ecléctico, con una inclinación por el indie, el pop
-                                y
-                                el rock alternativo. Siempre estoy buscando canciones que me hagan sentir y conectar
-                                con
-                                momentos especiales. Además de escuchar música, también disfruto de tocar la
-                                guitarra y
-                                escribir mis propias canciones. Únete a mi viaje musical y descubre conmigo lo mejor
-                                del
-                                mundo sonoro. 🎵✨
+                            <p id="profile-description">I am a woman passionate about music, and I love being up to date with my friends. In Soundwave I find my musical needs and it gives me the tools to enjoy all my favorite music, share and connect with my best friends and enjoy the music together. best music and latest news. 🎵✨
                             </p>
                         </section>
                         <section>
-                            <button class="follow-button"> + Add</button>
+                         <!-- boton +add-->
+                            <button id="add-button">+add</button>
+                            <div id="friends-list"></div>
+                        
+                            <!-- Modal -->
+                            <div id="suggestions-modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div id="suggestions"></div>
+                                </div>
+                            </div>
+                        <!-- boton edit profile-->
                             <button class="editprofile-button" onclick="location.href='./editprofile.html'">Edit
                                 Profile</button>
 
                             <!-- Posts -->
-                            <h1 class="title-desc text-center mb-5">-----</h1>
+                            <h4 class="title-desc text-center mb-5">My favorite musical genre is: Pop </h4>
                             <div id="post-form" class="container text-center justify-content-center">
                                 <form name="form1" id="postingform" class="contact-form">
                                     <div class="row justify-content-center text-start">
@@ -273,6 +278,7 @@
     <script src="userprofile1.js"></script>
     <script type="module" src="/loader.js"></script>
     <script src="/src/pages/feed/friends.js"></script>
+    <script src="/src/pages/userProfile/add.+.js"></script>
     <script src="/src/pages/feed/feed.js"></script>
     <script src="addfriend.js"></script>
     <script src="carrusel.js"></script>

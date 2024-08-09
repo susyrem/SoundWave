@@ -256,6 +256,9 @@ nav {
 h1 {
     color: #AACA45;
 }
+h4 {
+   color: #B69CFF;
+}
 
 #name {
     height: 3rem;
@@ -445,6 +448,7 @@ button {
     /* Cambia esto al color de fondo que desees */
     color: #211B32;
 }
+<<<<<<< HEAD
 
 .modal-body {
     padding: 15px;

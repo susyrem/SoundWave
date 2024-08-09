@@ -88,7 +88,7 @@ h2 {
     height: 5%;
     width: 25%;
     border-radius: 50%;
-    border: 3px solid  #B59CFE;
+    border: 3px solid #268fbe;
 }
 
 .offcanvas {
@@ -156,11 +156,33 @@ h2 {
 }
 
 
+.card,.card-body,.bg-image {
+    background-color:#AACA45(32, 26, 50);
+    color: white;
+    height: auto; 
+    width: 1500%;
+    max-width: 600px;
+}
+
 .card {
     background-color: rgb(32, 26, 50);
     color: white;
-    height: 40rem;
-    width: 22rem;
+    height: 35rem;
+}
+
+
+@media (max-width: 768px) {
+    .card,.card-body,.bg-image {
+        width: 280%; /* Hacer la tarjeta un poco más estrecha en pantallas pequeñas */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .card,.card-body,.bg-image{
+        width: 100%; /* Hacer la tarjeta ocupar el 100% del contenedor padre */
+        
+    }
 }
 .icons:hover {
     color:#B59CFE
@@ -233,7 +255,7 @@ svg:hover {
     background-color: rgb(158, 158, 158);
 
 }
-
+/* post */
 #sharedPost {
     color: #AACA45; 
     margin-top: 5rem;
@@ -252,9 +274,6 @@ svg:hover {
     background-color: transparent;
     border-style: none;
 }
-
-
-
 /* esto es para spotify y las fficaciones */
 .spotify-player {
     margin-top: 10px;
@@ -298,7 +317,7 @@ svg:hover {
    background-color: #211b32;
    border-radius: 2%;
    margin-right: 5%;
-   
+   padding: 50px;
 }
 .sidebarIzquierda {
     padding: 10px;
@@ -307,10 +326,7 @@ svg:hover {
     border-radius: 2%;
     margin-left: 10%;
     margin-right: 10%;
-
-  
 }
-
 .main-content {
     display: flex;
     flex-direction: column;
@@ -318,14 +334,10 @@ svg:hover {
     padding: 20px;
     margin-bottom: 15rem;
 }
-
 #exampleModalLabel{
     color: #211B32;
 }
-.card-body{
-    padding: 20px;
-    margin-bottom: 10px;   
-}
+
 .btnFriends {
     background-color: #268FBE;
 }
