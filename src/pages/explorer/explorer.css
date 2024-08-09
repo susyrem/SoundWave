@@ -334,3 +334,45 @@ footer {
         width: 100%;
     }
 }
+
+.carruselItem {
+
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebarIzquierda {
+        flex: 0 0 100%;
+        height: auto;
+        margin-right: 3%;
+        overflow: hidden;
+    }
+
+    .carruselInterno {
+        flex-direction: row;
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carrusel-Item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+
+        margin-right: 10%;
+        flex: 0 0 100%;
+
+        
+        align-items: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+    }
+}

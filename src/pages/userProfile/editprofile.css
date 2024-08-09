@@ -5,15 +5,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color:rgba(32, 26, 50, 0.945);
+    background-color: rgba(32, 26, 50, 0.945);
 }
+
 
 /* Fondo del perfil de edición */
 .editprofileFondo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
     background-color: #201A32;
 }
@@ -93,6 +94,6 @@ a.button:hover {
     color: white;
 }
 
-form > * {
+form>* {
     margin-bottom: 16px;
 }
